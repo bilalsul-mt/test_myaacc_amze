@@ -267,25 +267,25 @@
           <tr>
             <td rowspan="2">
               <div class="label">order history</div>
-              <div class="profile-card" style="min-height: 168px;">
+              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #f5f8ff 0%, #eef7ff 48%, #f9fbff 100%);">
                 <div class="avatar" aria-hidden="true"></div>
                 <div class="profile-content">
                   <div class="name">Order Summary</div>
-                  <div class="pill">ดูรายการสั่งซื้อ <span>›</span></div>
+                  <div class="pill">สถานะคำสั่งซื้อ <span>›</span></div>
                 </div>
                 <div class="gear" aria-hidden="true"></div>
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-004<br />Verify order history section is shown for guest+ and amaze accounts</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the order history block appears only for authenticated non-guest users.</div>
+              <div class="testcase-title">TC-UI-004<br />Verify order history card shows only order status actions</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the order history card contains only the 5 status icons and the view-all link.</div>
               <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
               <div class="meta">
                 <strong>Steps:</strong>
                 <ol>
                   <li>Open the My Account page with a guest+ account.</li>
                   <li>Open the My Account page with an amaze account.</li>
-                  <li>Check whether the order history section and badge counters are visible.</li>
+                  <li>Check the order history card contents.</li>
                 </ol>
               </div>
             </td>
@@ -293,9 +293,10 @@
               <ul>
                 <li>แสดงหัวข้อ order history เฉพาะ guest+ และ amaze</li>
                 <li>แสดงปุ่ม “ดูทั้งหมด” หรือ see all สำหรับเข้าไปดูประวัติการสั่งซื้อ</li>
-                <li>แสดงเมนู To Ship, Shipping, To Receive, Return/Refund และ To Review ตามข้อมูล badge</li>
+                <li>แสดงเฉพาะสถานะ To Ship, Shipping, To Receive, Return/Refund และ To Review</li>
                 <li>กด “ดูทั้งหมด” แล้วต้องเปิดหน้า order history ที่แท็บ All</li>
                 <li>หากเป็นบัญชี guest จะไม่แสดง section นี้</li>
+                <li>ไม่แสดง `E-Voucher ของฉัน` หรือ `คูปองของฉัน` ใน card นี้</li>
               </ul>
             </td>
           </tr>
@@ -324,6 +325,65 @@
           </tr>
           <tr>
             <td rowspan="2">
+              <div class="label">e-voucher and coupon</div>
+              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #f7fbff 0%, #f1f7ff 48%, #fbfbff 100%);">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="profile-content">
+                  <div class="name">Reward Cards</div>
+                  <div class="pill">ของรางวัลส่วนตัว <span>›</span></div>
+                </div>
+                <div class="gear" aria-hidden="true"></div>
+              </div>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-006<br />Verify E-Voucher card and page</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the E-Voucher entry is shown as a separate card and opens the correct page.</div>
+              <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page.</li>
+                  <li>Tap `E-Voucher ของฉัน`.</li>
+                  <li>Observe the destination page and its state tabs.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดง card `E-Voucher ของฉัน` แยกจาก order history</li>
+                <li>เมื่อกดแล้วต้องเปิดหน้า E-Voucher ที่ถูกต้อง</li>
+                <li>หน้า E-Voucher ต้องมีแท็บของตัวเอง เช่น ทั้งหมด, กำลังดำเนินการ, ใช้งานได้</li>
+                <li>empty state ต้องแสดงข้อความว่าไม่มีรายการสั่งซื้อเมื่อไม่มี voucher</li>
+                <li>ไม่เอา coupon card มารวมใน card นี้</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-007<br />Verify coupon card and page</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the coupon entry is shown as a separate card and opens the correct page.</div>
+              <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page.</li>
+                  <li>Tap `คูปองของฉัน`.</li>
+                  <li>Observe the destination page and the coupon tabs.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดง card `คูปองของฉัน` แยกจาก order history</li>
+                <li>เมื่อกดแล้วต้องเปิดหน้า Coupon ที่ถูกต้อง</li>
+                <li>หน้า Coupon ต้องมีแท็บของตัวเอง เช่น ทั้งหมด, พิเศษสำหรับคุณ, รีวอร์ด, คูปองสมาชิกใหม่</li>
+                <li>empty state ต้องแสดงข้อความว่าไม่พบคูปองเมื่อไม่มีข้อมูล</li>
+                <li>ไม่เอา E-Voucher card มารวมใน card นี้</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
               <div class="label">extra menu and benefits</div>
               <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #fff3df 0%, #f8f1ff 48%, #e9fbf8 100%);">
                 <div class="avatar" aria-hidden="true"></div>
@@ -335,7 +395,7 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-006<br />Verify extra menu items for guest+ and amaze accounts</div>
+              <div class="testcase-title">TC-UI-008<br />Verify extra menu items for guest+ and amaze accounts</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the extra menu row changes by account level.</div>
               <div class="meta"><strong>Precondition:</strong> User is authenticated as guest+ or amaze.</div>
               <div class="meta">
@@ -358,7 +418,7 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-007<br />Verify affiliate banner, help section, and legal section are visible</div>
+              <div class="testcase-title">TC-UI-009<br />Verify affiliate banner, help section, and legal section are visible</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the lower sections render with the right data and links.</div>
               <div class="meta"><strong>Precondition:</strong> User is authenticated and the template data returns affiliate and help content.</div>
               <div class="meta">
@@ -393,7 +453,7 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-008<br />Verify happitat banner appears only for amaze accounts</div>
+              <div class="testcase-title">TC-UI-010<br />Verify happitat banner appears only for amaze accounts</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the happitat section is rendered only when the user is an amaze member.</div>
               <div class="meta"><strong>Precondition:</strong> User is authenticated as amaze and happitat data exists.</div>
               <div class="meta">
@@ -416,7 +476,7 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-009<br />Verify navigation and visibility matrix across all account levels</div>
+              <div class="testcase-title">TC-UI-011<br />Verify navigation and visibility matrix across all account levels</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the page switches content correctly between guest, guest+, and amaze.</div>
               <div class="meta"><strong>Precondition:</strong> Tester can switch account level or mock the stored session.</div>
               <div class="meta">
