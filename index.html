@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Account Page Notes</title>
+  <style>
+    :root {
+      --border: #d9d9df;
+      --head: #f2f3f5;
+      --text: #23262d;
+      --accent: #2f80ed;
+      --bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+    }
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+      background: linear-gradient(180deg, rgba(250, 250, 252, 0.95), rgba(255, 255, 255, 1));
+    }
+    .table-wrap {
+      max-width: 1600px;
+      margin: 0 auto;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+    table {
+      width: 100%;
+      min-width: 1200px;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+      padding: 18px 18px 16px;
+    }
+    th {
+      background: var(--head);
+      font-size: 28px;
+      font-weight: 800;
+    }
+    td {
+      font-size: 20px;
+      line-height: 1.45;
+    }
+    .scope-cell { width: 34%; }
+    .testcase-cell { width: 23%; }
+    .expect-cell { width: 43%; }
+    .label {
+      font-size: 21px;
+      color: #30343b;
+      margin-bottom: 18px;
+    }
+    .profile-card {
+      width: 100%;
+      max-width: 560px;
+      min-height: 190px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #f7e9ff 0%, #eef3ff 48%, #e9fbf8 100%);
+      padding: 26px 18px 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      overflow: hidden;
+    }
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 36%, #7cb2ff 0 18px, #3c72e6 19px 37px, transparent 38px),
+        radial-gradient(circle at 50% 86%, #5c8ff3 0 31px, transparent 32px),
+        linear-gradient(180deg, #f7fbff, #dbe9ff);
+      border: 1px solid rgba(70, 120, 230, 0.12);
+      flex: 0 0 auto;
+      box-shadow: 0 8px 18px rgba(63, 112, 219, 0.16);
+    }
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+    .name {
+      font-size: 19px;
+      font-weight: 800;
+      color: #222;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      border: 2px solid #b9d5ff;
+      color: var(--accent);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 3px 10px rgba(47, 128, 237, 0.12);
+    }
+    .gear {
+      position: absolute;
+      top: 22px;
+      right: 18px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #7e7e7e;
+      opacity: 0.8;
+    }
+    ul {
+      margin: 0;
+      padding-left: 26px;
+    }
+    li { margin: 12px 0; }
+    @media (max-width: 980px) {
+      th { font-size: 22px; }
+      td { font-size: 17px; }
+      .label { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="table-wrap">
+      <table>
+        <colgroup>
+          <col class="scope-cell" />
+          <col class="testcase-cell" />
+          <col class="expect-cell" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Scope</th>
+            <th>Testcase</th>
+            <th>Expect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">
+              <div class="label">user info</div>
+              <div class="profile-card">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="profile-content">
+                  <div class="name">พัชริภัชญา สุวรรณนันท์</div>
+                  <div class="pill">ข้อมูลส่วนตัว <span>›</span></div>
+                </div>
+                <div class="gear" aria-hidden="true"></div>
+              </div>
+            </td>
+            <td><div class="label">not login</div></td>
+            <td>
+              <ul>
+                <li>มี icon user</li>
+                <li>มี text “สวัสดี”</li>
+                <li>มีปุ่ม เข้าสู่ระบบ/สมัครสมาชิก</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="label">login guest+</div></td>
+            <td>
+              <ul>
+                <li>มี icon user</li>
+                <li>มี text “สมัครสมาชิกอเมซ...”</li>
+                <li>มีปุ่ม ข้อมูลส่วนตัว</li>
+                <li>มี banner ชวนสมัคร amaze</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="label">login amaze</div></td>
+            <td>
+              <ul>
+                <li>มี icon user</li>
+                <li>มีชื่อสมาชิกจริงจาก profile</li>
+                <li>มีปุ่ม ข้อมูลส่วนตัว</li>
+                <li>มี order history, extra menu, help section</li>
+                <li>มี happitat และ My Coupon</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
