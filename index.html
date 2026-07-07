@@ -62,6 +62,16 @@
       color: #30343b;
       margin-bottom: 18px;
     }
+    .state-list {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #4a4f59;
+    }
+    .state-list li {
+      margin: 6px 0;
+    }
     .section {
       margin-top: 12px;
     }
@@ -120,6 +130,15 @@
       display: block;
       border-radius: 14px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
+    .inline-shot {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin-top: 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
       background: #fff;
     }
     .profile-content {
@@ -268,7 +287,6 @@
                 <li>แสดงชื่อสมาชิกจริงจากโปรไฟล์ที่ล็อกอินอยู่</li>
                 <li>แสดงปุ่ม “ข้อมูลส่วนตัว” เพื่อไปยังหน้ารายละเอียดบัญชี</li>
                 <li>แสดงเมนูประวัติการสั่งซื้อ เมนูเพิ่มเติม และส่วนช่วยเหลือครบถ้วน</li>
-                <li>แสดงเมนู Happitat และคูปองของฉันตามสิทธิ์ของบัญชี Amaze</li>
                 <li>ข้อมูลที่แสดงต้องสอดคล้องกับโปรไฟล์ของผู้ใช้ที่เข้าสู่ระบบในเซสชันปัจจุบัน</li>
                 <li>เมนูที่กดได้ต้องนำไปยังปลายทางที่ถูกต้องและไม่แสดงข้อมูลจากบัญชีอื่น</li>
               </ul>
@@ -277,6 +295,11 @@
           <tr>
             <td rowspan="2">
               <div class="label">ประวัติการสั่งซื้อ</div>
+              <ul class="state-list">
+                <li>ผู้เยี่ยมชม: ไม่แสดงส่วนนี้</li>
+                <li>ผู้เยี่ยมชม+: แสดงการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</li>
+                <li>Amaze: แสดงการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</li>
+              </ul>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
@@ -335,10 +358,15 @@
           <tr>
             <td rowspan="2">
               <div class="label">E-Voucher และคูปอง</div>
+              <ul class="state-list">
+                <li>ผู้เยี่ยมชม: ไม่แสดงส่วนนี้</li>
+                <li>ผู้เยี่ยมชม+: แสดง `E-Voucher ของฉัน` เท่านั้น</li>
+                <li>Amaze: แสดง `E-Voucher ของฉัน` และ `คูปองของฉัน`</li>
+              </ul>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
-                  src="my%20acc%20img%20test/1.2.png"
+                  src="my%20acc%20img%20test/vocher%20and%20coupon.png"
                   alt="การ์ด E-Voucher และคูปอง"
                 />
               </div>
@@ -391,42 +419,8 @@
             </td>
           </tr>
           <tr>
-            <td rowspan="2">
-              <div class="label">เมนูเพิ่มเติมและสิทธิประโยชน์</div>
-              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #fff3df 0%, #f8f1ff 48%, #e9fbf8 100%);">
-                <div class="avatar" aria-hidden="true"></div>
-                <div class="profile-content">
-                  <div class="name">เมนูสิทธิประโยชน์</div>
-                  <div class="pill">เมนูเพิ่มเติม <span>›</span></div>
-                </div>
-                <div class="gear" aria-hidden="true"></div>
-              </div>
-            </td>
             <td>
-              <div class="testcase-title">TC-UI-008<br />ตรวจสอบเมนูเพิ่มเติมตามระดับบัญชีผู้เยี่ยมชม+ และ Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าแถวเมนูเพิ่มเติมเปลี่ยนตามระดับบัญชีได้ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดหน้าบัญชีของฉันสำหรับบัญชีผู้เยี่ยมชม+</li>
-                  <li>เปิดหน้าบัญชีของฉันสำหรับบัญชี Amaze</li>
-                  <li>เปรียบเทียบปุ่มเมนูเพิ่มเติมที่แสดงอยู่</li>
-                </ol>
-              </div>
-            </td>
-            <td>
-              <ul>
-                <li>ผู้ใช้แบบผู้เยี่ยมชม+ ต้องเห็นประวัติ E-Voucher เท่านั้นในเมนูเพิ่มเติม</li>
-                <li>Amaze ต้องเห็นประวัติ E-Voucher และคูปองของฉัน</li>
-                <li>ปุ่มเมนูเพิ่มเติมทุกอันต้องกดได้และพาไปยังหน้าที่ถูกต้อง</li>
-                <li>ผู้เยี่ยมชมจะไม่เห็นส่วนนี้เลย</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="testcase-title">TC-UI-009<br />ตรวจสอบแบนเนอร์สร้างรายได้ ส่วนช่วยเหลือ และส่วนกฎหมายแสดงครบถ้วน</div>
+              <div class="testcase-title">TC-UI-008<br />ตรวจสอบแบนเนอร์สร้างรายได้ ส่วนช่วยเหลือ และส่วนกฎหมายแสดงครบถ้วน</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าส่วนล่างแสดงข้อมูลและลิงก์ได้ถูกต้อง</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและข้อมูลจากเทมเพลตของพันธมิตรและส่วนช่วยเหลือพร้อมใช้งาน</div>
               <div class="meta">
@@ -449,24 +443,45 @@
             </td>
           </tr>
           <tr>
-            <td rowspan="2">
-              <div class="label">แบนเนอร์พันธมิตร</div>
+            <td rowspan="3">
+              <div class="label">Affiliate Banner</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
-                  src="my%20acc%20img%20test/6.png"
-                  alt="แบนเนอร์พันธมิตร Amaze"
+                  src="my%20acc%20img%20test/affiliate.png"
+                  alt="Affiliate banner"
                 />
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-010<br />ตรวจสอบการแสดงแบนเนอร์พันธมิตรสำหรับผู้ใช้ที่เข้าสู่ระบบ</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าแบนเนอร์พันธมิตรแสดงเมื่อมีข้อมูลจากเทมเพลต</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและมีข้อมูลพันธมิตร</div>
+              <div class="testcase-title">TC-UI-009<br />Verify affiliate banner display for guest</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชมไม่เห็นแบนเนอร์พันธมิตร</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+ หรือ Amaze</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม</li>
+                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
+                  <li>ตรวจสอบบริเวณแบนเนอร์</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>ไม่ควรแสดงแบนเนอร์พันธมิตรสำหรับผู้เยี่ยมชม</li>
+                <li>ไม่ควรแสดงพื้นที่ว่างของแบนเนอร์ในส่วนนี้</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-010<br />Verify affiliate banner display for guest+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชม+ เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ และมีข้อมูลพันธมิตร</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
                   <li>เลื่อนไปยังส่วนพันธมิตร</li>
                   <li>แตะแบนเนอร์พันธมิตร</li>
                 </ol>
@@ -477,13 +492,46 @@
                 <li>แสดงหัวข้อพันธมิตร Amaze</li>
                 <li>แสดงแบนเนอร์ตามภาพที่กำหนด</li>
                 <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดดีพลิงก์ที่ผูกไว้</li>
-                <li>ผู้เยี่ยมชมไม่ควรเห็นแบนเนอร์นี้</li>
+                <li>ผู้เยี่ยมชม+ ควรเห็นแบนเนอร์เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-011<br />ตรวจสอบการ์ดในส่วนช่วยเหลือเปิดหน้าที่ถูกต้อง</div>
+              <div class="testcase-title">TC-UI-011<br />Verify affiliate banner display for Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze และมีข้อมูลพันธมิตร</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
+                  <li>แตะแบนเนอร์พันธมิตร</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงหัวข้อพันธมิตร Amaze</li>
+                <li>แสดงแบนเนอร์ตามภาพที่กำหนด</li>
+                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดดีพลิงก์ที่ผูกไว้</li>
+                <li>Amaze ควรเห็นแบนเนอร์เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              <div class="label">Help Section</div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/Help.png"
+                  alt="Help section"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-012<br />ตรวจสอบการ์ดในส่วนช่วยเหลือเปิดหน้าที่ถูกต้อง</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าการ์ดส่วนช่วยเหลือใช้ภาพที่ถูกต้องและเปิดหน้าช่วยเหลือที่ถูกต้อง</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ข้อมูลเมนูช่วยเหลือพร้อมใช้งาน</div>
               <div class="meta">
@@ -497,44 +545,20 @@
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ดช่วยเหลือตามภาพ `7.png`</li>
-                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing` ตามภาพ `8.png`</li>
-                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ ตามภาพ `9.png`</li>
-                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้าตามภาพ `10.png` ก่อนเข้าหน้าปลายทาง</li>
+                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
+                </li>
+                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
+                </li>
+                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
+                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
+                </li>
+                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
+                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
+                </li>
+                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
                 <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">
-              <div class="label">เข้าสู่ระบบและโปรโมชัน</div>
-              <div class="section-shot-wrap">
-                <img
-                  class="section-shot"
-                  src="my%20acc%20img%20test/11.png"
-                  alt="หน้าเข้าสู่ระบบ"
-                />
-              </div>
-            </td>
-            <td>
-              <div class="testcase-title">TC-UI-012<br />ตรวจสอบหน้าเข้าสู่ระบบและจุดเข้าสู่โปรโมชัน</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าขั้นตอนการเข้าสู่ระบบและโปรโมชันใช้หน้าที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ออกจากระบบหรือเปิดขั้นตอนเข้าสู่ระบบ / โปรโมชัน</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดขั้นตอนเข้าสู่ระบบจากหน้าบัญชีของฉัน</li>
-                  <li>ตรวจสอบเลย์เอาต์ของหน้าเข้าสู่ระบบ</li>
-                  <li>เปิดหน้าโปรโมชัน / สิทธิประโยชน์หากมี</li>
-                </ol>
-              </div>
-            </td>
-            <td>
-              <ul>
-                <li>หน้าเข้าสู่ระบบต้องตรงกับภาพ `11.png`</li>
-                <li>หน้าโปรโมชัน / สิทธิประโยชน์ต้องตรงกับภาพ `12.png`</li>
-                <li>ปุ่มสมัครใช้งานและปุ่มลืมรหัสผ่านต้องอยู่ในตำแหน่งที่ถูกต้อง</li>
-                <li>แบรนด์ Amaze / Axtra Mall ต้องแสดงถูกต้อง</li>
               </ul>
             </td>
           </tr>
@@ -554,51 +578,24 @@
             </td>
             <td>
               <ul>
-                <li>รายการนโยบายต้องตรงกับภาพ `13.png`</li>
-                <li>หน้ารายละเอียดความยินยอมต้องตรงกับภาพ `14.png`</li>
-                <li>หน้าปรับความยินยอมต้องตรงกับภาพ `15.png`</li>
-                <li>หน้าความยินยอมของคู่ค้าธุรกิจต้องตรงกับภาพ `16.png`</li>
-                <li>หน้ายืนยันการเปลี่ยนแปลงต้องตรงกับภาพ `17.png`</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">
-              <div class="label">แบนเนอร์ Happitat</div>
-              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #e8f7ff 0%, #edf8f2 48%, #fff4ee 100%);">
-                <div class="avatar" aria-hidden="true"></div>
-                <div class="profile-content">
-                  <div class="name">ทางเข้า Happitat</div>
-                  <div class="pill">เปิดแบนเนอร์ <span>›</span></div>
-                </div>
-                <div class="gear" aria-hidden="true"></div>
-              </div>
-            </td>
-            <td>
-              <div class="testcase-title">TC-UI-014<br />ตรวจสอบแบนเนอร์ Happitat แสดงเฉพาะบัญชี Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าส่วน Happitat แสดงเฉพาะเมื่อผู้ใช้เป็นสมาชิก Amaze</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze และมีข้อมูล Happitat</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
-                  <li>เลื่อนไปด้านบนของส่วนเนื้อหา</li>
-                  <li>ตรวจสอบว่าแบนเนอร์ Happitat แสดงอยู่และแตะได้</li>
-                </ol>
-              </div>
-            </td>
-            <td>
-              <ul>
-                <li>แสดงแบนเนอร์ Happitat เฉพาะสมาชิก Amaze</li>
-                <li>ผู้เยี่ยมชมและผู้เยี่ยมชม+ ต้องไม่เห็นส่วนนี้</li>
-                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดปลายทางดีพลิงก์ที่ผูกไว้</li>
-                <li>หากไม่มีข้อมูลแบนเนอร์ ต้องไม่แสดงพื้นที่ว่างผิดปกติ</li>
+                <li>รายการนโยบายต้องตรงกับภาพนโยบาย
+                  <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms screenshot" />
+                </li>
+                <li>หน้ารายละเอียดความยินยอมต้องตรงกับภาพรายละเอียด
+                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy screenshot" />
+                </li>
+                <li>หน้าปรับความยินยอมต้องตรงกับภาพปรับความยินยอม
+                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20to%20asso.png" alt="Change consent screenshot" />
+                </li>
+                <li>หน้าความยินยอมของคู่ค้าธุรกิจต้องตรงกับภาพคู่ค้าธุรกิจ
+                  <img class="inline-shot" src="my%20acc%20img%20test/permission%20for%20associate%20data%20share.png" alt="Business partner consent screenshot" />
+                </li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-015<br />ตรวจสอบการสลับเนื้อหาและการมองเห็นตามระดับบัญชี</div>
+              <div class="testcase-title">TC-UI-014<br />ตรวจสอบการสลับเนื้อหาและการมองเห็นตามระดับบัญชี</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหน้าเปลี่ยนเนื้อหาได้ถูกต้องระหว่างผู้เยี่ยมชม ผู้เยี่ยมชม+ และ Amaze</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ทดสอบสามารถสลับระดับบัญชีหรือจำลองเซสชันที่เก็บไว้ได้</div>
               <div class="meta">
@@ -615,7 +612,7 @@
               <ul>
                 <li>ผู้เยี่ยมชมแสดงเฉพาะปุ่มเข้าสู่ระบบ ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
                 <li>ผู้เยี่ยมชม+ แสดงแบนเนอร์อัปเกรด ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
-                <li>Amaze แสดงปุ่มโปรไฟล์ แบนเนอร์ Amaze ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร Happitat ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
+                <li>Amaze แสดงปุ่มโปรไฟล์ แบนเนอร์ Amaze ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
                 <li>ทุกสถานะต้องไม่แสดงวิดเจ็ตของสถานะอื่นปนกัน</li>
                 <li>เลย์เอาต์ต้องไม่เสียหายเมื่อสลับระดับบัญชี</li>
               </ul>
