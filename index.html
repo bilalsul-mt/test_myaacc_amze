@@ -62,6 +62,30 @@
       color: #30343b;
       margin-bottom: 18px;
     }
+    .section {
+      margin-top: 12px;
+    }
+    .section-title {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 800;
+      color: #1f2430;
+    }
+    .testcase-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #1f2430;
+    }
+    .meta {
+      margin-top: 8px;
+      font-size: 17px;
+      color: #4a4f59;
+      line-height: 1.5;
+    }
+    .meta strong {
+      color: #2a2f39;
+    }
     .profile-card {
       width: 100%;
       max-width: 560px;
@@ -166,35 +190,77 @@
                 <div class="gear" aria-hidden="true"></div>
               </div>
             </td>
-            <td><div class="label">not login</div></td>
+            <td>
+              <div class="testcase-title">TC-UI-001<br />Verify user info section when the user is not logged in</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the account header shows the correct anonymous state.</div>
+              <div class="meta"><strong>Precondition:</strong> User is logged out and has not stored an active session.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page.</li>
+                  <li>Observe the top user info section.</li>
+                  <li>Tap the login or sign-up entry points.</li>
+                </ol>
+              </div>
+            </td>
             <td>
               <ul>
-                <li>มี icon user</li>
-                <li>มี text “สวัสดี”</li>
-                <li>มีปุ่ม เข้าสู่ระบบ/สมัครสมาชิก</li>
+                <li>แสดง icon user ที่ตำแหน่งหัวข้อ user info</li>
+                <li>แสดงข้อความต้อนรับ “สวัสดี”</li>
+                <li>แสดงปุ่ม “เข้าสู่ระบบ” และ “สมัครสมาชิก” ให้ผู้ใช้กดได้</li>
+                <li>กดปุ่มแล้วต้องพาไปยัง flow ที่เหมาะสมสำหรับการเข้าสู่ระบบหรือสมัครสมาชิก</li>
+                <li>ไม่แสดงชื่อสมาชิกจริงหรือเมนูข้อมูลส่วนตัวของบัญชีที่ล็อกอินแล้ว</li>
               </ul>
             </td>
           </tr>
           <tr>
-            <td><div class="label">login guest+</div></td>
+            <td>
+              <div class="testcase-title">TC-UI-002<br />Verify user info section when the user is logged in as guest+</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the guest+ account state exposes upgrade prompts and profile access.</div>
+              <div class="meta"><strong>Precondition:</strong> User is authenticated with a guest+ account.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page while logged in as guest+.</li>
+                  <li>Review the user info content and banner area.</li>
+                  <li>Select the profile entry point.</li>
+                </ol>
+              </div>
+            </td>
             <td>
               <ul>
-                <li>มี icon user</li>
-                <li>มี text “สมัครสมาชิกอเมซ...”</li>
-                <li>มีปุ่ม ข้อมูลส่วนตัว</li>
-                <li>มี banner ชวนสมัคร amaze</li>
+                <li>แสดง icon user เหมือนสถานะอื่น</li>
+                <li>แสดงข้อความเชิญชวนสมัครสมาชิก amaze แบบ guest+</li>
+                <li>แสดงปุ่ม “ข้อมูลส่วนตัว” ให้เข้าไปดูรายละเอียดโปรไฟล์</li>
+                <li>แสดง banner ชวนสมัคร amaze ตามดีไซน์ของหน้า</li>
+                <li>กดปุ่มข้อมูลส่วนตัวแล้วต้องเปิดหน้าหรือ drawer โปรไฟล์ที่ถูกต้อง</li>
+                <li>ไม่แสดงชื่อสมาชิกแบบเต็มเหมือนบัญชี amaze ที่ผูกโปรไฟล์แล้ว</li>
               </ul>
             </td>
           </tr>
           <tr>
-            <td><div class="label">login amaze</div></td>
+            <td>
+              <div class="testcase-title">TC-UI-003<br />Verify user info section when the user is logged in as amaze</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the fully registered amaze account renders personalized account content.</div>
+              <div class="meta"><strong>Precondition:</strong> User is authenticated with an amaze account that has a saved profile.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page while logged in as amaze.</li>
+                  <li>Check the displayed name and the account menu list.</li>
+                  <li>Open profile, history, coupon, and help related entries.</li>
+                </ol>
+              </div>
+            </td>
             <td>
               <ul>
-                <li>มี icon user</li>
-                <li>มีชื่อสมาชิกจริงจาก profile</li>
-                <li>มีปุ่ม ข้อมูลส่วนตัว</li>
-                <li>มี order history, extra menu, help section</li>
-                <li>มี happitat และ My Coupon</li>
+                <li>แสดง icon user ที่ส่วนหัวของบัญชี</li>
+                <li>แสดงชื่อสมาชิกจริงจาก profile ที่ล็อกอินอยู่</li>
+                <li>แสดงปุ่ม “ข้อมูลส่วนตัว” เพื่อไปยังหน้ารายละเอียดบัญชี</li>
+                <li>แสดงเมนู order history, extra menu และ help section ครบถ้วน</li>
+                <li>แสดงเมนู happitat และ My Coupon ตามสิทธิ์ของบัญชี amaze</li>
+                <li>ข้อมูลที่แสดงต้องสอดคล้องกับ profile ของผู้ใช้ที่ล็อกอินใน session ปัจจุบัน</li>
+                <li>เมนูที่กดได้ต้องนำไปยังปลายทางที่ถูกต้องและไม่แสดงข้อมูลจากบัญชีอื่น</li>
               </ul>
             </td>
           </tr>
