@@ -111,6 +111,17 @@
       flex: 0 0 auto;
       box-shadow: 0 8px 18px rgba(63, 112, 219, 0.16);
     }
+    .section-shot-wrap {
+      margin-top: 18px;
+    }
+    .section-shot {
+      width: 100%;
+      max-width: 560px;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
     .profile-content {
       display: flex;
       flex-direction: column;
@@ -267,13 +278,12 @@
           <tr>
             <td rowspan="2">
               <div class="label">order history</div>
-              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #f5f8ff 0%, #eef7ff 48%, #f9fbff 100%);">
-                <div class="avatar" aria-hidden="true"></div>
-                <div class="profile-content">
-                  <div class="name">Order Summary</div>
-                  <div class="pill">สถานะคำสั่งซื้อ <span>›</span></div>
-                </div>
-                <div class="gear" aria-hidden="true"></div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/1.1.png"
+                  alt="Order history card"
+                />
               </div>
             </td>
             <td>
@@ -326,13 +336,12 @@
           <tr>
             <td rowspan="2">
               <div class="label">e-voucher and coupon</div>
-              <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #f7fbff 0%, #f1f7ff 48%, #fbfbff 100%);">
-                <div class="avatar" aria-hidden="true"></div>
-                <div class="profile-content">
-                  <div class="name">Reward Cards</div>
-                  <div class="pill">ของรางวัลส่วนตัว <span>›</span></div>
-                </div>
-                <div class="gear" aria-hidden="true"></div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/1.2.png"
+                  alt="E-Voucher and coupon cards"
+                />
               </div>
             </td>
             <td>
@@ -442,6 +451,120 @@
           </tr>
           <tr>
             <td rowspan="2">
+              <div class="label">affiliate banner</div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/6.png"
+                  alt="Amaze Affiliate banner"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-010<br />Verify affiliate banner is shown for authenticated users</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the affiliate banner appears when the affiliate template data is available.</div>
+              <div class="meta"><strong>Precondition:</strong> User is logged in and affiliate data exists.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page as guest+ or amaze.</li>
+                  <li>Scroll to the affiliate section.</li>
+                  <li>Tap the affiliate banner.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงหัวข้อ Amaze Affiliate</li>
+                <li>แสดง banner ตามภาพที่กำหนด</li>
+                <li>กด banner แล้วต้องเปิด deeplink ที่ผูกไว้</li>
+                <li>guest ไม่ควรเห็น banner นี้</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-011<br />Verify help section cards open correct support pages</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm help cards use the correct screenshots and open the right support pages.</div>
+              <div class="meta"><strong>Precondition:</strong> Help menu data is available.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the My Account page.</li>
+                  <li>Scroll to the help section.</li>
+                  <li>Tap each help card.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงการ์ด help ตามภาพ `7.png`</li>
+                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing` ตามภาพ `8.png`</li>
+                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ ตามภาพ `9.png`</li>
+                <li>`แชทกับร้านค้า` ต้องเปิด loading / seller contact ตามภาพ `10.png` ก่อนเข้าหน้าปลายทาง</li>
+                <li>การ์ด help อื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              <div class="label">login and promotion</div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/11.png"
+                  alt="Login page"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-012<br />Verify login page and promotion entry points</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the login and related promotional flows use the correct screens.</div>
+              <div class="meta"><strong>Precondition:</strong> User is logged out or navigates to a login/promotion flow.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the login flow from My Account.</li>
+                  <li>Verify the login page layout.</li>
+                  <li>Open the promotion / benefits page if available.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>login page ต้องตรงกับภาพ `11.png`</li>
+                <li>promotion / benefits page ต้องตรงกับภาพ `12.png`</li>
+                <li>ปุ่มสมัครใช้งานและปุ่มลืมรหัสผ่านต้องอยู่ในตำแหน่งที่ถูกต้อง</li>
+                <li>แบรนด์ Amaze / Axtra Mall ต้องแสดงถูกต้อง</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-013<br />Verify consent and privacy pages use the correct layouts</div>
+              <div class="meta section"><strong>Objective:</strong> Confirm the terms, privacy, and consent flow screens render correctly.</div>
+              <div class="meta"><strong>Precondition:</strong> User opens legal or consent pages from My Account.</div>
+              <div class="meta">
+                <strong>Steps:</strong>
+                <ol>
+                  <li>Open the terms / privacy list.</li>
+                  <li>Open a consent detail page.</li>
+                  <li>Open a change-consent page and the confirmation screen.</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>รายการนโยบายต้องตรงกับภาพ `13.png`</li>
+                <li>หน้ารายละเอียด consent ต้องตรงกับภาพ `14.png`</li>
+                <li>หน้าปรับความยินยอมต้องตรงกับภาพ `15.png`</li>
+                <li>หน้าความยินยอมของ business partner ต้องตรงกับภาพ `16.png`</li>
+                <li>หน้ายืนยันการเปลี่ยนแปลงต้องตรงกับภาพ `17.png`</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
               <div class="label">happitat banner</div>
               <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #e8f7ff 0%, #edf8f2 48%, #fff4ee 100%);">
                 <div class="avatar" aria-hidden="true"></div>
@@ -453,7 +576,7 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-010<br />Verify happitat banner appears only for amaze accounts</div>
+              <div class="testcase-title">TC-UI-014<br />Verify happitat banner appears only for amaze accounts</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the happitat section is rendered only when the user is an amaze member.</div>
               <div class="meta"><strong>Precondition:</strong> User is authenticated as amaze and happitat data exists.</div>
               <div class="meta">
@@ -476,7 +599,7 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-011<br />Verify navigation and visibility matrix across all account levels</div>
+              <div class="testcase-title">TC-UI-015<br />Verify navigation and visibility matrix across all account levels</div>
               <div class="meta section"><strong>Objective:</strong> Confirm the page switches content correctly between guest, guest+, and amaze.</div>
               <div class="meta"><strong>Precondition:</strong> Tester can switch account level or mock the stored session.</div>
               <div class="meta">
