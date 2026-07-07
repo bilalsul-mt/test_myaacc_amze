@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Account Page Notes</title>
+  <title>บันทึกกรณีทดสอบหน้าบัญชีของฉัน</title>
   <style>
     :root {
       --border: #d9d9df;
@@ -183,15 +183,15 @@
         </colgroup>
         <thead>
           <tr>
-            <th>Scope</th>
-            <th>Testcase</th>
-            <th>Expect</th>
+            <th>ขอบเขต</th>
+            <th>กรณีทดสอบ</th>
+            <th>ผลที่คาดหวัง</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td rowspan="3">
-              <div class="label">user info</div>
+              <div class="label">ข้อมูลผู้ใช้</div>
               <div class="profile-card">
                 <div class="avatar" aria-hidden="true"></div>
                 <div class="profile-content">
@@ -202,338 +202,338 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-001<br />Verify user info section when the user is not logged in</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the account header shows the correct anonymous state.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged out and has not stored an active session.</div>
+              <div class="testcase-title">TC-UI-001<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อยังไม่ได้เข้าสู่ระบบ</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหัวข้อบัญชีแสดงสถานะผู้ใช้แบบไม่ระบุตัวตนได้ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบและไม่มีเซสชันที่ใช้งานอยู่</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page.</li>
-                  <li>Observe the top user info section.</li>
-                  <li>Tap the login or sign-up entry points.</li>
+                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>สังเกตส่วนข้อมูลผู้ใช้ด้านบน</li>
+                  <li>แตะจุดเข้าสู่ระบบหรือสมัครสมาชิก</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง icon user ที่ตำแหน่งหัวข้อ user info</li>
+                <li>แสดงไอคอนผู้ใช้ในตำแหน่งหัวข้อข้อมูลผู้ใช้</li>
                 <li>แสดงข้อความต้อนรับ “สวัสดี”</li>
                 <li>แสดงปุ่ม “เข้าสู่ระบบ” และ “สมัครสมาชิก” ให้ผู้ใช้กดได้</li>
-                <li>กดปุ่มแล้วต้องพาไปยัง flow ที่เหมาะสมสำหรับการเข้าสู่ระบบหรือสมัครสมาชิก</li>
-                <li>ไม่แสดงชื่อสมาชิกจริงหรือเมนูข้อมูลส่วนตัวของบัญชีที่ล็อกอินแล้ว</li>
+                <li>เมื่อกดปุ่มแล้วต้องพาไปยังขั้นตอนที่เหมาะสมสำหรับการเข้าสู่ระบบหรือสมัครสมาชิก</li>
+                <li>ไม่แสดงชื่อสมาชิกจริงหรือเมนูข้อมูลส่วนตัวของบัญชีที่เข้าสู่ระบบแล้ว</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-002<br />Verify user info section when the user is logged in as guest+</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the guest+ account state exposes upgrade prompts and profile access.</div>
-              <div class="meta"><strong>Precondition:</strong> User is authenticated with a guest+ account.</div>
+              <div class="testcase-title">TC-UI-002<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าสถานะผู้เยี่ยมชม+ แสดงข้อความเชิญอัปเกรดและทางเข้าหน้าโปรไฟล์ได้</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชีผู้เยี่ยมชม+</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page while logged in as guest+.</li>
-                  <li>Review the user info content and banner area.</li>
-                  <li>Select the profile entry point.</li>
+                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบผู้เยี่ยมชม+</li>
+                  <li>ตรวจสอบเนื้อหาในส่วนข้อมูลผู้ใช้และพื้นที่แบนเนอร์</li>
+                  <li>เลือกจุดเข้าสู่หน้าโปรไฟล์</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง icon user เหมือนสถานะอื่น</li>
-                <li>แสดงข้อความเชิญชวนสมัครสมาชิก amaze แบบ guest+</li>
+                <li>แสดงไอคอนผู้ใช้เหมือนสถานะอื่น</li>
+                <li>แสดงข้อความเชิญชวนสมัครสมาชิก Amaze แบบผู้เยี่ยมชม+</li>
                 <li>แสดงปุ่ม “ข้อมูลส่วนตัว” ให้เข้าไปดูรายละเอียดโปรไฟล์</li>
-                <li>แสดง banner ชวนสมัคร amaze ตามดีไซน์ของหน้า</li>
-                <li>กดปุ่มข้อมูลส่วนตัวแล้วต้องเปิดหน้าหรือ drawer โปรไฟล์ที่ถูกต้อง</li>
-                <li>ไม่แสดงชื่อสมาชิกแบบเต็มเหมือนบัญชี amaze ที่ผูกโปรไฟล์แล้ว</li>
+                <li>แสดงแบนเนอร์ชวนสมัคร Amaze ตามดีไซน์ของหน้า</li>
+                <li>เมื่อกดปุ่มข้อมูลส่วนตัวแล้วต้องเปิดหน้าหรือแผงเลื่อนโปรไฟล์ที่ถูกต้อง</li>
+                <li>ไม่แสดงชื่อสมาชิกแบบเต็มเหมือนบัญชี Amaze ที่ผูกโปรไฟล์แล้ว</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-003<br />Verify user info section when the user is logged in as amaze</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the fully registered amaze account renders personalized account content.</div>
-              <div class="meta"><strong>Precondition:</strong> User is authenticated with an amaze account that has a saved profile.</div>
+              <div class="testcase-title">TC-UI-003<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบ Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าบัญชี Amaze ที่ลงทะเบียนครบถ้วนแสดงเนื้อหาส่วนตัวได้ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชี Amaze ที่มีโปรไฟล์บันทึกไว้</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page while logged in as amaze.</li>
-                  <li>Check the displayed name and the account menu list.</li>
-                  <li>Open profile, history, coupon, and help related entries.</li>
+                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบ Amaze</li>
+                  <li>ตรวจสอบชื่อที่แสดงและรายการเมนูบัญชี</li>
+                  <li>เปิดรายการที่เกี่ยวกับโปรไฟล์ ประวัติ คูปอง และความช่วยเหลือ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง icon user ที่ส่วนหัวของบัญชี</li>
-                <li>แสดงชื่อสมาชิกจริงจาก profile ที่ล็อกอินอยู่</li>
+                <li>แสดงไอคอนผู้ใช้ที่ส่วนหัวของบัญชี</li>
+                <li>แสดงชื่อสมาชิกจริงจากโปรไฟล์ที่ล็อกอินอยู่</li>
                 <li>แสดงปุ่ม “ข้อมูลส่วนตัว” เพื่อไปยังหน้ารายละเอียดบัญชี</li>
-                <li>แสดงเมนู order history, extra menu และ help section ครบถ้วน</li>
-                <li>แสดงเมนู happitat และ My Coupon ตามสิทธิ์ของบัญชี amaze</li>
-                <li>ข้อมูลที่แสดงต้องสอดคล้องกับ profile ของผู้ใช้ที่ล็อกอินใน session ปัจจุบัน</li>
+                <li>แสดงเมนูประวัติการสั่งซื้อ เมนูเพิ่มเติม และส่วนช่วยเหลือครบถ้วน</li>
+                <li>แสดงเมนู Happitat และคูปองของฉันตามสิทธิ์ของบัญชี Amaze</li>
+                <li>ข้อมูลที่แสดงต้องสอดคล้องกับโปรไฟล์ของผู้ใช้ที่เข้าสู่ระบบในเซสชันปัจจุบัน</li>
                 <li>เมนูที่กดได้ต้องนำไปยังปลายทางที่ถูกต้องและไม่แสดงข้อมูลจากบัญชีอื่น</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">order history</div>
+              <div class="label">ประวัติการสั่งซื้อ</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/1.1.png"
-                  alt="Order history card"
+                  alt="การ์ดประวัติการสั่งซื้อ"
                 />
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-004<br />Verify order history card shows only order status actions</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the order history card contains only the 5 status icons and the view-all link.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
+              <div class="testcase-title">TC-UI-004<br />ตรวจสอบการ์ดประวัติการสั่งซื้อแสดงเฉพาะสถานะคำสั่งซื้อ</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าการ์ดประวัติการสั่งซื้อมีเพียง 5 สถานะและลิงก์ดูทั้งหมด</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page with a guest+ account.</li>
-                  <li>Open the My Account page with an amaze account.</li>
-                  <li>Check the order history card contents.</li>
+                  <li>เปิดหน้าบัญชีของฉันด้วยบัญชีผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันด้วยบัญชี Amaze</li>
+                  <li>ตรวจสอบเนื้อหาภายในการ์ดประวัติการสั่งซื้อ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงหัวข้อ order history เฉพาะ guest+ และ amaze</li>
-                <li>แสดงปุ่ม “ดูทั้งหมด” หรือ see all สำหรับเข้าไปดูประวัติการสั่งซื้อ</li>
-                <li>แสดงเฉพาะสถานะ To Ship, Shipping, To Receive, Return/Refund และ To Review</li>
-                <li>กด “ดูทั้งหมด” แล้วต้องเปิดหน้า order history ที่แท็บ All</li>
-                <li>หากเป็นบัญชี guest จะไม่แสดง section นี้</li>
-                <li>ไม่แสดง `E-Voucher ของฉัน` หรือ `คูปองของฉัน` ใน card นี้</li>
+                <li>แสดงหัวข้อประวัติการสั่งซื้อเฉพาะผู้เยี่ยมชม+ และ Amaze</li>
+                <li>แสดงปุ่ม “ดูทั้งหมด” สำหรับเข้าไปดูประวัติการสั่งซื้อ</li>
+                <li>แสดงเฉพาะสถานะกำลังดำเนินการ กำลังจัดส่ง ที่ต้องได้รับ คืนเงิน/คืนสินค้า และให้คะแนน</li>
+                <li>เมื่อกด “ดูทั้งหมด” แล้วต้องเปิดหน้าประวัติการสั่งซื้อที่แท็บทั้งหมด</li>
+                <li>หากเป็นบัญชีผู้เยี่ยมชมจะไม่แสดงส่วนนี้</li>
+                <li>ไม่แสดง `E-Voucher ของฉัน` หรือ `คูปองของฉัน` ในการ์ดนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-005<br />Verify order history badge values and empty states</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the badge counters render correctly from the fetched summary data.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged in and the order history summary API returns counts or null values.</div>
+              <div class="testcase-title">TC-UI-005<br />ตรวจสอบตัวเลขป้ายสถานะของประวัติการสั่งซื้อและสถานะว่าง</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าตัวเลขป้ายสถานะแสดงถูกต้องตามข้อมูลสรุปที่ดึงมาได้</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและเอพีไอสรุปของประวัติการสั่งซื้อส่งค่าจำนวนหรือค่าว่าง</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page after the summary data is loaded.</li>
-                  <li>Inspect each order status icon badge.</li>
-                  <li>Verify hidden or null counts do not create broken badges.</li>
+                  <li>เปิดหน้าบัญชีของฉันหลังจากข้อมูลสรุปโหลดเสร็จ</li>
+                  <li>ตรวจสอบป้ายสถานะของแต่ละไอคอนสถานะคำสั่งซื้อ</li>
+                  <li>ยืนยันว่าค่าที่ไม่มีหรือเป็นค่าว่างไม่ทำให้ป้ายสถานะเพี้ยน</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>ตัวเลข badge ต้องตรงกับ response ของแต่ละสถานะ</li>
-                <li>สถานะที่ไม่มีข้อมูลหรือเป็น null ต้องไม่แสดงตัวเลขผิด</li>
-                <li>การแสดง badge ต้องไม่ทำให้ layout แตกหรือซ้อนกับ icon</li>
-                <li>ค่า badge ต้องอัปเดตตาม session ปัจจุบัน ไม่ใช่ค่า cache ของผู้ใช้คนก่อน</li>
+                <li>ตัวเลขป้ายสถานะต้องตรงกับผลลัพธ์ของแต่ละสถานะ</li>
+                <li>สถานะที่ไม่มีข้อมูลหรือเป็นค่าว่างต้องไม่แสดงตัวเลขผิด</li>
+                <li>การแสดงป้ายสถานะต้องไม่ทำให้เลย์เอาต์แตกหรือทับซ้อนกับไอคอน</li>
+                <li>ค่าป้ายสถานะต้องอัปเดตตามเซสชันปัจจุบัน ไม่ใช่ค่าจากแคชของผู้ใช้คนก่อน</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">e-voucher and coupon</div>
+              <div class="label">E-Voucher และคูปอง</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/1.2.png"
-                  alt="E-Voucher and coupon cards"
+                  alt="การ์ด E-Voucher และคูปอง"
                 />
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-006<br />Verify E-Voucher card and page</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the E-Voucher entry is shown as a separate card and opens the correct page.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
+              <div class="testcase-title">TC-UI-006<br />ตรวจสอบการ์ดและหน้าของ E-Voucher</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่ารายการ E-Voucher แสดงแยกเป็นการ์ดและเปิดหน้าที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page.</li>
-                  <li>Tap `E-Voucher ของฉัน`.</li>
-                  <li>Observe the destination page and its state tabs.</li>
+                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>แตะ `E-Voucher ของฉัน`</li>
+                  <li>สังเกตหน้าปลายทางและแท็บสถานะ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง card `E-Voucher ของฉัน` แยกจาก order history</li>
+                <li>แสดงการ์ด `E-Voucher ของฉัน` แยกจากประวัติการสั่งซื้อ</li>
                 <li>เมื่อกดแล้วต้องเปิดหน้า E-Voucher ที่ถูกต้อง</li>
-                <li>หน้า E-Voucher ต้องมีแท็บของตัวเอง เช่น ทั้งหมด, กำลังดำเนินการ, ใช้งานได้</li>
-                <li>empty state ต้องแสดงข้อความว่าไม่มีรายการสั่งซื้อเมื่อไม่มี voucher</li>
-                <li>ไม่เอา coupon card มารวมใน card นี้</li>
+                <li>หน้า E-Voucher ต้องมีแท็บของตัวเอง เช่น ทั้งหมด กำลังดำเนินการ และใช้งานได้</li>
+                <li>สถานะว่างต้องแสดงข้อความว่าไม่มีรายการสั่งซื้อเมื่อไม่มี voucher</li>
+                <li>ไม่เอาการ์ดคูปองมารวมในส่วนนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-007<br />Verify coupon card and page</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the coupon entry is shown as a separate card and opens the correct page.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged in as guest+ or amaze.</div>
+              <div class="testcase-title">TC-UI-007<br />ตรวจสอบการ์ดและหน้าคูปอง</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่ารายการคูปองแสดงแยกเป็นการ์ดและเปิดหน้าที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page.</li>
-                  <li>Tap `คูปองของฉัน`.</li>
-                  <li>Observe the destination page and the coupon tabs.</li>
+                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>แตะ `คูปองของฉัน`</li>
+                  <li>สังเกตหน้าปลายทางและแท็บคูปอง</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง card `คูปองของฉัน` แยกจาก order history</li>
-                <li>เมื่อกดแล้วต้องเปิดหน้า Coupon ที่ถูกต้อง</li>
-                <li>หน้า Coupon ต้องมีแท็บของตัวเอง เช่น ทั้งหมด, พิเศษสำหรับคุณ, รีวอร์ด, คูปองสมาชิกใหม่</li>
-                <li>empty state ต้องแสดงข้อความว่าไม่พบคูปองเมื่อไม่มีข้อมูล</li>
-                <li>ไม่เอา E-Voucher card มารวมใน card นี้</li>
+                <li>แสดงการ์ด `คูปองของฉัน` แยกจากประวัติการสั่งซื้อ</li>
+                <li>เมื่อกดแล้วต้องเปิดหน้าคูปองที่ถูกต้อง</li>
+                <li>หน้าคูปองต้องมีแท็บของตัวเอง เช่น ทั้งหมด พิเศษสำหรับคุณ รีวอร์ด และคูปองสมาชิกใหม่</li>
+                <li>สถานะว่างต้องแสดงข้อความว่าไม่พบคูปองเมื่อไม่มีข้อมูล</li>
+                <li>ไม่เอาการ์ด E-Voucher มารวมในส่วนนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">extra menu and benefits</div>
+              <div class="label">เมนูเพิ่มเติมและสิทธิประโยชน์</div>
               <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #fff3df 0%, #f8f1ff 48%, #e9fbf8 100%);">
                 <div class="avatar" aria-hidden="true"></div>
                 <div class="profile-content">
-                  <div class="name">Benefits & Menu</div>
+                  <div class="name">เมนูสิทธิประโยชน์</div>
                   <div class="pill">เมนูเพิ่มเติม <span>›</span></div>
                 </div>
                 <div class="gear" aria-hidden="true"></div>
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-008<br />Verify extra menu items for guest+ and amaze accounts</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the extra menu row changes by account level.</div>
-              <div class="meta"><strong>Precondition:</strong> User is authenticated as guest+ or amaze.</div>
+              <div class="testcase-title">TC-UI-008<br />ตรวจสอบเมนูเพิ่มเติมตามระดับบัญชีผู้เยี่ยมชม+ และ Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าแถวเมนูเพิ่มเติมเปลี่ยนตามระดับบัญชีได้ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page for a guest+ account.</li>
-                  <li>Open the My Account page for an amaze account.</li>
-                  <li>Compare the visible extra menu buttons.</li>
+                  <li>เปิดหน้าบัญชีของฉันสำหรับบัญชีผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันสำหรับบัญชี Amaze</li>
+                  <li>เปรียบเทียบปุ่มเมนูเพิ่มเติมที่แสดงอยู่</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>guest+ ต้องเห็น e-Voucher history เท่านั้นใน extra menu</li>
-                <li>amaze ต้องเห็น e-Voucher history และ My Coupon</li>
-                <li>ปุ่ม extra menu ทุกอันต้องกดได้และพาไปยังหน้าที่ถูกต้อง</li>
-                <li>guest จะไม่เห็น extra menu section นี้เลย</li>
+                <li>ผู้ใช้แบบผู้เยี่ยมชม+ ต้องเห็นประวัติ E-Voucher เท่านั้นในเมนูเพิ่มเติม</li>
+                <li>Amaze ต้องเห็นประวัติ E-Voucher และคูปองของฉัน</li>
+                <li>ปุ่มเมนูเพิ่มเติมทุกอันต้องกดได้และพาไปยังหน้าที่ถูกต้อง</li>
+                <li>ผู้เยี่ยมชมจะไม่เห็นส่วนนี้เลย</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-009<br />Verify affiliate banner, help section, and legal section are visible</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the lower sections render with the right data and links.</div>
-              <div class="meta"><strong>Precondition:</strong> User is authenticated and the template data returns affiliate and help content.</div>
+              <div class="testcase-title">TC-UI-009<br />ตรวจสอบแบนเนอร์สร้างรายได้ ส่วนช่วยเหลือ และส่วนกฎหมายแสดงครบถ้วน</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าส่วนล่างแสดงข้อมูลและลิงก์ได้ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและข้อมูลจากเทมเพลตของพันธมิตรและส่วนช่วยเหลือพร้อมใช้งาน</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page as a non-guest account.</li>
-                  <li>Scroll to the affiliate area, help grid, and law section.</li>
-                  <li>Tap a help card and a legal item.</li>
+                  <li>เปิดหน้าบัญชีของฉันในบัญชีที่ไม่ใช่ผู้เยี่ยมชม</li>
+                  <li>เลื่อนลงไปยังส่วนพันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
+                  <li>แตะการ์ดช่วยเหลือและรายการกฎหมาย</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงหัวข้อ affiliate พร้อม banner เมื่อมีข้อมูลจาก template</li>
-                <li>แสดงหัวข้อ help section และรายการช่วยเหลือตาม API</li>
-                <li>แสดงหัวข้อ law section ทุกครั้ง</li>
-                <li>help card และ legal item ต้องพาไปยังปลายทางที่ถูกต้อง</li>
-                <li>guest ไม่ควรเห็น affiliate banner แต่ยังเห็น help และ law section ได้</li>
+                <li>แสดงหัวข้อพันธมิตรพร้อมแบนเนอร์เมื่อมีข้อมูลจากเทมเพลต</li>
+                <li>แสดงหัวข้อส่วนช่วยเหลือและรายการช่วยเหลือตามเอพีไอ</li>
+                <li>แสดงหัวข้อส่วนกฎหมายทุกครั้ง</li>
+                <li>การ์ดช่วยเหลือและรายการกฎหมายต้องพาไปยังปลายทางที่ถูกต้อง</li>
+                <li>ผู้เยี่ยมชมไม่ควรเห็นแบนเนอร์พันธมิตร แต่ยังเห็นส่วนช่วยเหลือและส่วนกฎหมายได้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">affiliate banner</div>
+              <div class="label">แบนเนอร์พันธมิตร</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/6.png"
-                  alt="Amaze Affiliate banner"
+                  alt="แบนเนอร์พันธมิตร Amaze"
                 />
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-010<br />Verify affiliate banner is shown for authenticated users</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the affiliate banner appears when the affiliate template data is available.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged in and affiliate data exists.</div>
+              <div class="testcase-title">TC-UI-010<br />ตรวจสอบการแสดงแบนเนอร์พันธมิตรสำหรับผู้ใช้ที่เข้าสู่ระบบ</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าแบนเนอร์พันธมิตรแสดงเมื่อมีข้อมูลจากเทมเพลต</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและมีข้อมูลพันธมิตร</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page as guest+ or amaze.</li>
-                  <li>Scroll to the affiliate section.</li>
-                  <li>Tap the affiliate banner.</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+ หรือ Amaze</li>
+                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
+                  <li>แตะแบนเนอร์พันธมิตร</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงหัวข้อ Amaze Affiliate</li>
-                <li>แสดง banner ตามภาพที่กำหนด</li>
-                <li>กด banner แล้วต้องเปิด deeplink ที่ผูกไว้</li>
-                <li>guest ไม่ควรเห็น banner นี้</li>
+                <li>แสดงหัวข้อพันธมิตร Amaze</li>
+                <li>แสดงแบนเนอร์ตามภาพที่กำหนด</li>
+                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดดีพลิงก์ที่ผูกไว้</li>
+                <li>ผู้เยี่ยมชมไม่ควรเห็นแบนเนอร์นี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-011<br />Verify help section cards open correct support pages</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm help cards use the correct screenshots and open the right support pages.</div>
-              <div class="meta"><strong>Precondition:</strong> Help menu data is available.</div>
+              <div class="testcase-title">TC-UI-011<br />ตรวจสอบการ์ดในส่วนช่วยเหลือเปิดหน้าที่ถูกต้อง</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าการ์ดส่วนช่วยเหลือใช้ภาพที่ถูกต้องและเปิดหน้าช่วยเหลือที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ข้อมูลเมนูช่วยเหลือพร้อมใช้งาน</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page.</li>
-                  <li>Scroll to the help section.</li>
-                  <li>Tap each help card.</li>
+                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
+                  <li>แตะการ์ดส่วนช่วยเหลือแต่ละรายการ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ด help ตามภาพ `7.png`</li>
+                <li>แสดงการ์ดช่วยเหลือตามภาพ `7.png`</li>
                 <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing` ตามภาพ `8.png`</li>
                 <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ ตามภาพ `9.png`</li>
-                <li>`แชทกับร้านค้า` ต้องเปิด loading / seller contact ตามภาพ `10.png` ก่อนเข้าหน้าปลายทาง</li>
-                <li>การ์ด help อื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้าตามภาพ `10.png` ก่อนเข้าหน้าปลายทาง</li>
+                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">login and promotion</div>
+              <div class="label">เข้าสู่ระบบและโปรโมชัน</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/11.png"
-                  alt="Login page"
+                  alt="หน้าเข้าสู่ระบบ"
                 />
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-012<br />Verify login page and promotion entry points</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the login and related promotional flows use the correct screens.</div>
-              <div class="meta"><strong>Precondition:</strong> User is logged out or navigates to a login/promotion flow.</div>
+              <div class="testcase-title">TC-UI-012<br />ตรวจสอบหน้าเข้าสู่ระบบและจุดเข้าสู่โปรโมชัน</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าขั้นตอนการเข้าสู่ระบบและโปรโมชันใช้หน้าที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ออกจากระบบหรือเปิดขั้นตอนเข้าสู่ระบบ / โปรโมชัน</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the login flow from My Account.</li>
-                  <li>Verify the login page layout.</li>
-                  <li>Open the promotion / benefits page if available.</li>
+                  <li>เปิดขั้นตอนเข้าสู่ระบบจากหน้าบัญชีของฉัน</li>
+                  <li>ตรวจสอบเลย์เอาต์ของหน้าเข้าสู่ระบบ</li>
+                  <li>เปิดหน้าโปรโมชัน / สิทธิประโยชน์หากมี</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>login page ต้องตรงกับภาพ `11.png`</li>
-                <li>promotion / benefits page ต้องตรงกับภาพ `12.png`</li>
+                <li>หน้าเข้าสู่ระบบต้องตรงกับภาพ `11.png`</li>
+                <li>หน้าโปรโมชัน / สิทธิประโยชน์ต้องตรงกับภาพ `12.png`</li>
                 <li>ปุ่มสมัครใช้งานและปุ่มลืมรหัสผ่านต้องอยู่ในตำแหน่งที่ถูกต้อง</li>
                 <li>แบรนด์ Amaze / Axtra Mall ต้องแสดงถูกต้อง</li>
               </ul>
@@ -541,84 +541,84 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-013<br />Verify consent and privacy pages use the correct layouts</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the terms, privacy, and consent flow screens render correctly.</div>
-              <div class="meta"><strong>Precondition:</strong> User opens legal or consent pages from My Account.</div>
+              <div class="testcase-title">TC-UI-013<br />ตรวจสอบหน้าข้อกำหนด ความเป็นส่วนตัว และความยินยอม</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหน้าเงื่อนไข ความเป็นส่วนตัว และความยินยอมแสดงผลถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เปิดหน้ากฎหมายหรือความยินยอมจากหน้าบัญชีของฉัน</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the terms / privacy list.</li>
-                  <li>Open a consent detail page.</li>
-                  <li>Open a change-consent page and the confirmation screen.</li>
+                  <li>เปิดหน้ารายการข้อกำหนด / ความเป็นส่วนตัว</li>
+                  <li>เปิดหน้ารายละเอียดความยินยอม</li>
+                  <li>เปิดหน้าปรับความยินยอมและหน้ายืนยันผล</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
                 <li>รายการนโยบายต้องตรงกับภาพ `13.png`</li>
-                <li>หน้ารายละเอียด consent ต้องตรงกับภาพ `14.png`</li>
+                <li>หน้ารายละเอียดความยินยอมต้องตรงกับภาพ `14.png`</li>
                 <li>หน้าปรับความยินยอมต้องตรงกับภาพ `15.png`</li>
-                <li>หน้าความยินยอมของ business partner ต้องตรงกับภาพ `16.png`</li>
+                <li>หน้าความยินยอมของคู่ค้าธุรกิจต้องตรงกับภาพ `16.png`</li>
                 <li>หน้ายืนยันการเปลี่ยนแปลงต้องตรงกับภาพ `17.png`</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td rowspan="2">
-              <div class="label">happitat banner</div>
+              <div class="label">แบนเนอร์ Happitat</div>
               <div class="profile-card" style="min-height: 168px; background: linear-gradient(90deg, #e8f7ff 0%, #edf8f2 48%, #fff4ee 100%);">
                 <div class="avatar" aria-hidden="true"></div>
                 <div class="profile-content">
-                  <div class="name">Happitat Entry</div>
+                  <div class="name">ทางเข้า Happitat</div>
                   <div class="pill">เปิดแบนเนอร์ <span>›</span></div>
                 </div>
                 <div class="gear" aria-hidden="true"></div>
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-014<br />Verify happitat banner appears only for amaze accounts</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the happitat section is rendered only when the user is an amaze member.</div>
-              <div class="meta"><strong>Precondition:</strong> User is authenticated as amaze and happitat data exists.</div>
+              <div class="testcase-title">TC-UI-014<br />ตรวจสอบแบนเนอร์ Happitat แสดงเฉพาะบัญชี Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าส่วน Happitat แสดงเฉพาะเมื่อผู้ใช้เป็นสมาชิก Amaze</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze และมีข้อมูล Happitat</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the My Account page as amaze.</li>
-                  <li>Scroll to the top of the content sections.</li>
-                  <li>Verify the happitat banner is visible and tappable.</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เลื่อนไปด้านบนของส่วนเนื้อหา</li>
+                  <li>ตรวจสอบว่าแบนเนอร์ Happitat แสดงอยู่และแตะได้</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดง happitat banner เฉพาะ amaze member</li>
-                <li>guest และ guest+ ต้องไม่เห็น section นี้</li>
-                <li>กด banner แล้วต้องเปิดปลายทาง deeplink ที่ผูกไว้</li>
-                <li>หากไม่มีข้อมูล banner ต้องไม่แสดง placeholder ว่างผิดปกติ</li>
+                <li>แสดงแบนเนอร์ Happitat เฉพาะสมาชิก Amaze</li>
+                <li>ผู้เยี่ยมชมและผู้เยี่ยมชม+ ต้องไม่เห็นส่วนนี้</li>
+                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดปลายทางดีพลิงก์ที่ผูกไว้</li>
+                <li>หากไม่มีข้อมูลแบนเนอร์ ต้องไม่แสดงพื้นที่ว่างผิดปกติ</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-015<br />Verify navigation and visibility matrix across all account levels</div>
-              <div class="meta section"><strong>Objective:</strong> Confirm the page switches content correctly between guest, guest+, and amaze.</div>
-              <div class="meta"><strong>Precondition:</strong> Tester can switch account level or mock the stored session.</div>
+              <div class="testcase-title">TC-UI-015<br />ตรวจสอบการสลับเนื้อหาและการมองเห็นตามระดับบัญชี</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหน้าเปลี่ยนเนื้อหาได้ถูกต้องระหว่างผู้เยี่ยมชม ผู้เยี่ยมชม+ และ Amaze</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ทดสอบสามารถสลับระดับบัญชีหรือจำลองเซสชันที่เก็บไว้ได้</div>
               <div class="meta">
-                <strong>Steps:</strong>
+                <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>Open the page as guest.</li>
-                  <li>Open the page as guest+.</li>
-                  <li>Open the page as amaze.</li>
-                  <li>Compare header, banners, menu rows, and lower sections.</li>
+                  <li>เปิดหน้าในสถานะผู้เยี่ยมชม</li>
+                  <li>เปิดหน้าในสถานะผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าในสถานะ Amaze</li>
+                  <li>เปรียบเทียบส่วนหัว แบนเนอร์ แถวเมนู และส่วนล่างของหน้า</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>guest แสดงเฉพาะ login CTA, help section และ legal section</li>
-                <li>guest+ แสดง upgrade banner, order history, extra menu, affiliate, help และ law</li>
-                <li>amaze แสดง profile button, amaze banner, order history, extra menu, affiliate, happitat, help และ law</li>
-                <li>ทุกสถานะต้องไม่แสดง widget ของ state อื่นปนกัน</li>
-                <li>layout ต้องไม่เสียหายเมื่อสลับ account level</li>
+                <li>ผู้เยี่ยมชมแสดงเฉพาะปุ่มเข้าสู่ระบบ ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
+                <li>ผู้เยี่ยมชม+ แสดงแบนเนอร์อัปเกรด ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
+                <li>Amaze แสดงปุ่มโปรไฟล์ แบนเนอร์ Amaze ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร Happitat ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
+                <li>ทุกสถานะต้องไม่แสดงวิดเจ็ตของสถานะอื่นปนกัน</li>
+                <li>เลย์เอาต์ต้องไม่เสียหายเมื่อสลับระดับบัญชี</li>
               </ul>
             </td>
           </tr>
