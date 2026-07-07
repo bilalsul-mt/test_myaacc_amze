@@ -293,152 +293,176 @@
             </td>
           </tr>
           <tr>
-            <td rowspan="2">
-              <div class="label">ประวัติการสั่งซื้อ</div>
-              <ul class="state-list">
-                <li>ผู้เยี่ยมชม: ไม่แสดงส่วนนี้</li>
-                <li>ผู้เยี่ยมชม+: แสดงการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</li>
-                <li>Amaze: แสดงการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</li>
-              </ul>
+            <td rowspan="3">
+              <div class="label">Order History</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/order%20badge.png"
-                  alt="การ์ดประวัติการสั่งซื้อ"
+                  alt="Order history badge"
                 />
               </div>
-            </td>
-            <td>
-              <div class="testcase-title">TC-UI-004<br />ตรวจสอบการ์ดประวัติการสั่งซื้อแสดงเฉพาะสถานะคำสั่งซื้อ</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าการ์ดประวัติการสั่งซื้อแสดงปุ่มสถานะคำสั่งซื้อและลิงก์ดูทั้งหมดได้ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดหน้าบัญชีของฉันด้วยบัญชีผู้เยี่ยมชม+</li>
-                  <li>เปิดหน้าบัญชีของฉันด้วยบัญชี Amaze</li>
-                  <li>ตรวจสอบเนื้อหาภายในการ์ดประวัติการสั่งซื้อและปุ่มมุมขวาบน</li>
-                </ol>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/order%20bagde%20all.png"
+                  alt="Order history all page"
+                />
               </div>
-            </td>
-            <td>
-              <ul>
-                <li>แสดงหัวข้อประวัติการสั่งซื้อเฉพาะผู้เยี่ยมชม+ และ Amaze</li>
-                <li>แสดงปุ่ม “ดูทั้งหมด” สำหรับเข้าไปดูประวัติการสั่งซื้อ</li>
-                <li>แสดงเฉพาะสถานะกำลังดำเนินการ กำลังจัดส่ง ที่ต้องได้รับ คืนเงิน/คืนสินค้า และให้คะแนน</li>
-                <li>เมื่อกดปุ่มกำลังดำเนินการ กำลังจัดส่ง ที่ต้องได้รับ คืนเงิน/คืนสินค้า ให้คะแนน หรือปุ่ม “ดูทั้งหมด” มุมขวาบน ต้องเปิดหน้าประวัติการสั่งซื้อแบบป้ายสถานะทั้งหมด</li>
-                <li>หากเป็นบัญชีผู้เยี่ยมชมจะไม่แสดงส่วนนี้</li>
-                <li>ไม่แสดง `E-Voucher ของฉัน` หรือ `คูปองของฉัน` ในการ์ดนี้</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="testcase-title">TC-UI-005<br />ตรวจสอบตัวเลขป้ายสถานะของประวัติการสั่งซื้อและสถานะว่าง</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าตัวเลขป้ายสถานะแสดงถูกต้องตามข้อมูลสรุปที่ดึงมาได้</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและเอพีไอสรุปของประวัติการสั่งซื้อส่งค่าจำนวนหรือค่าว่าง</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดหน้าบัญชีของฉันหลังจากข้อมูลสรุปโหลดเสร็จ</li>
-                  <li>ตรวจสอบป้ายสถานะของแต่ละไอคอนสถานะคำสั่งซื้อ</li>
-                  <li>ยืนยันว่าค่าที่ไม่มีหรือเป็นค่าว่างไม่ทำให้ป้ายสถานะเพี้ยน</li>
-                </ol>
-              </div>
-            </td>
-            <td>
-              <ul>
-                <li>ตัวเลขป้ายสถานะต้องตรงกับผลลัพธ์ของแต่ละสถานะ</li>
-                <li>สถานะที่ไม่มีข้อมูลหรือเป็นค่าว่างต้องไม่แสดงตัวเลขผิด</li>
-                <li>การแสดงป้ายสถานะต้องไม่ทำให้เลย์เอาต์แตกหรือทับซ้อนกับไอคอน</li>
-                <li>ค่าป้ายสถานะต้องอัปเดตตามเซสชันปัจจุบัน ไม่ใช่ค่าจากแคชของผู้ใช้คนก่อน</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="2">
-              <div class="label">E-Voucher และคูปอง</div>
               <ul class="state-list">
-                <li>ผู้เยี่ยมชม: ไม่แสดงส่วนนี้</li>
-                <li>ผู้เยี่ยมชม+: แสดง `E-Voucher ของฉัน` เท่านั้น</li>
-                <li>Amaze: แสดง `E-Voucher ของฉัน` และ `คูปองของฉัน`</li>
+                <li>guest: not shown</li>
+                <li>guest+: order history card shown</li>
+                <li>Amaze: order history card shown</li>
               </ul>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-004<br />Verify order history visibility for guest</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest ไม่เห็นการ์ดประวัติการสั่งซื้อ</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ guest</li>
+                  <li>สังเกตบริเวณที่ปกติจะแสดงประวัติการสั่งซื้อ</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>ไม่แสดงการ์ดประวัติการสั่งซื้อสำหรับ guest</li>
+                <li>ไม่แสดงปุ่มสถานะคำสั่งซื้อในส่วนนี้</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-005<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ guest+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>ตรวจสอบการ์ดประวัติการสั่งซื้อและปุ่มมุมขวาบน</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงการ์ดประวัติการสั่งซื้อและปุ่ม “ดูทั้งหมด”</li>
+                <li>แสดงสถานะกำลังดำเนินการ กำลังจัดส่ง ที่ต้องได้รับ คืนเงิน/คืนสินค้า และให้คะแนน</li>
+                <li>เมื่อกดปุ่มสถานะหรือ “ดูทั้งหมด” ต้องเปิดหน้าประวัติการสั่งซื้อแบบป้ายสถานะทั้งหมด</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-006<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>ตรวจสอบการ์ดประวัติการสั่งซื้อและปุ่มมุมขวาบน</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงการ์ดประวัติการสั่งซื้อและปุ่ม “ดูทั้งหมด”</li>
+                <li>แสดงสถานะกำลังดำเนินการ กำลังจัดส่ง ที่ต้องได้รับ คืนเงิน/คืนสินค้า และให้คะแนน</li>
+                <li>เมื่อกดปุ่มสถานะหรือ “ดูทั้งหมด” ต้องเปิดหน้าประวัติการสั่งซื้อแบบป้ายสถานะทั้งหมด</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="label">E-Voucher และคูปอง</div>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
                   src="my%20acc%20img%20test/vocher%20and%20coupon.png"
-                  alt="การ์ด E-Voucher และคูปอง"
+                  alt="E-Voucher and coupon"
                 />
               </div>
+              <ul class="state-list">
+                <li>guest: hidden</li>
+                <li>guest+: E-Voucher only</li>
+                <li>Amaze: E-Voucher + coupon</li>
+              </ul>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-006<br />ตรวจสอบการ์ดและหน้าของ E-Voucher</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่ารายการ E-Voucher แสดงแยกเป็นการ์ดและเปิดหน้าที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
+              <div class="testcase-title">TC-UI-007<br />Verify E-Voucher visibility for guest</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest ไม่เห็นการ์ด E-Voucher</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ guest</li>
+                  <li>สังเกตบริเวณ E-Voucher และคูปอง</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>ไม่แสดงการ์ด E-Voucher</li>
+                <li>ไม่แสดงการ์ดคูปอง</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-008<br />Verify E-Voucher visibility for guest+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นเฉพาะการ์ด E-Voucher</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
                   <li>แตะ `E-Voucher ของฉัน`</li>
-                  <li>สังเกตหน้าปลายทางและแท็บสถานะ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ด `E-Voucher ของฉัน` แยกจากประวัติการสั่งซื้อ</li>
+                <li>แสดงการ์ด `E-Voucher ของฉัน`</li>
                 <li>เมื่อกดแล้วต้องเปิดหน้า E-Voucher ที่ถูกต้อง</li>
-                <li>หน้า E-Voucher ต้องมีแท็บของตัวเอง เช่น ทั้งหมด กำลังดำเนินการ และใช้งานได้</li>
-                <li>สถานะว่างต้องแสดงข้อความว่าไม่มีรายการสั่งซื้อเมื่อไม่มี voucher</li>
-                <li>ไม่เอาการ์ดคูปองมารวมในส่วนนี้</li>
+                <li>
+                  หน้าหลังแตะ E-Voucher ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/vocher%20page.png" alt="E-Voucher page" />
+                </li>
+                <li>หน้าคูปองต้องไม่แสดงในสถานะนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-007<br />ตรวจสอบการ์ดและหน้าคูปอง</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่ารายการคูปองแสดงแยกเป็นการ์ดและเปิดหน้าที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ หรือ Amaze</div>
+              <div class="testcase-title">TC-UI-009<br />Verify E-Voucher and coupon visibility for Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นทั้ง E-Voucher และคูปอง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>แตะ `E-Voucher ของฉัน`</li>
                   <li>แตะ `คูปองของฉัน`</li>
-                  <li>สังเกตหน้าปลายทางและแท็บคูปอง</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ด `คูปองของฉัน` แยกจากประวัติการสั่งซื้อ</li>
-                <li>เมื่อกดแล้วต้องเปิดหน้าคูปองที่ถูกต้อง</li>
+                <li>แสดงการ์ด `E-Voucher ของฉัน` และ `คูปองของฉัน`</li>
+                <li>เมื่อกดแล้วต้องเปิดหน้าที่ถูกต้องทั้งสองส่วน</li>
+                <li>
+                  หน้าหลังแตะ E-Voucher ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/vocher%20page.png" alt="E-Voucher page" />
+                </li>
+                <li>
+                  หน้าหลังแตะคูปองต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/coupon%20page.png" alt="Coupon page" />
+                </li>
                 <li>หน้าคูปองต้องมีแท็บของตัวเอง เช่น ทั้งหมด พิเศษสำหรับคุณ รีวอร์ด และคูปองสมาชิกใหม่</li>
-                <li>สถานะว่างต้องแสดงข้อความว่าไม่พบคูปองเมื่อไม่มีข้อมูล</li>
-                <li>ไม่เอาการ์ด E-Voucher มารวมในส่วนนี้</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="testcase-title">TC-UI-008<br />ตรวจสอบแบนเนอร์สร้างรายได้ ส่วนช่วยเหลือ และส่วนกฎหมายแสดงครบถ้วน</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าส่วนล่างแสดงข้อมูลและลิงก์ได้ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบและข้อมูลจากเทมเพลตของพันธมิตรและส่วนช่วยเหลือพร้อมใช้งาน</div>
-              <div class="meta">
-                <strong>ขั้นตอน:</strong>
-                <ol>
-                  <li>เปิดหน้าบัญชีของฉันในบัญชีที่ไม่ใช่ผู้เยี่ยมชม</li>
-                  <li>เลื่อนลงไปยังส่วนพันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
-                  <li>แตะการ์ดช่วยเหลือและรายการกฎหมาย</li>
-                </ol>
-              </div>
-            </td>
-            <td>
-              <ul>
-                <li>แสดงหัวข้อพันธมิตรพร้อมแบนเนอร์เมื่อมีข้อมูลจากเทมเพลต</li>
-                <li>แสดงหัวข้อส่วนช่วยเหลือและรายการช่วยเหลือตามเอพีไอ</li>
-                <li>แสดงหัวข้อส่วนกฎหมายทุกครั้ง</li>
-                <li>การ์ดช่วยเหลือและรายการกฎหมายต้องพาไปยังปลายทางที่ถูกต้อง</li>
-                <li>ผู้เยี่ยมชมไม่ควรเห็นแบนเนอร์พันธมิตร แต่ยังเห็นส่วนช่วยเหลือและส่วนกฎหมายได้</li>
               </ul>
             </td>
           </tr>
@@ -454,7 +478,7 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-009<br />Verify affiliate banner display for guest</div>
+              <div class="testcase-title">TC-UI-010<br />Verify affiliate banner display for guest</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชมไม่เห็นแบนเนอร์พันธมิตร</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
               <div class="meta">
@@ -475,7 +499,7 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-010<br />Verify affiliate banner display for guest+</div>
+              <div class="testcase-title">TC-UI-011<br />Verify affiliate banner display for guest+</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชม+ เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ และมีข้อมูลพันธมิตร</div>
               <div class="meta">
@@ -498,7 +522,7 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-011<br />Verify affiliate banner display for Amaze</div>
+              <div class="testcase-title">TC-UI-012<br />Verify affiliate banner display for Amaze</div>
               <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze และมีข้อมูลพันธมิตร</div>
               <div class="meta">
@@ -520,8 +544,12 @@
             </td>
           </tr>
           <tr>
-            <td rowspan="2">
+            <td rowspan="3">
               <div class="label">Help Section</div>
+              <ul class="state-list">
+                <li>all states: same help cards</li>
+                <li>state-specific checks focus on access and link targets</li>
+              </ul>
               <div class="section-shot-wrap">
                 <img
                   class="section-shot"
@@ -531,15 +559,15 @@
               </div>
             </td>
             <td>
-              <div class="testcase-title">TC-UI-012<br />ตรวจสอบการ์ดในส่วนช่วยเหลือเปิดหน้าที่ถูกต้อง</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าการ์ดส่วนช่วยเหลือใช้ภาพที่ถูกต้องและเปิดหน้าช่วยเหลือที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ข้อมูลเมนูช่วยเหลือพร้อมใช้งาน</div>
+              <div class="testcase-title">TC-UI-013<br />Verify help cards for guest</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉัน</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ guest</li>
                   <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
-                  <li>แตะการ์ดส่วนช่วยเหลือแต่ละรายการ</li>
+                  <li>แตะการ์ดช่วยเหลือแต่ละรายการ</li>
                 </ol>
               </div>
             </td>
@@ -564,57 +592,168 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-013<br />ตรวจสอบหน้าข้อกำหนด ความเป็นส่วนตัว และความยินยอม</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหน้าเงื่อนไข ความเป็นส่วนตัว และความยินยอมแสดงผลถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เปิดหน้ากฎหมายหรือความยินยอมจากหน้าบัญชีของฉัน</div>
+              <div class="testcase-title">TC-UI-014<br />Verify help cards for guest+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้ารายการข้อกำหนด / ความเป็นส่วนตัว</li>
-                  <li>เปิดหน้ารายละเอียดความยินยอม</li>
-                  <li>เปิดหน้าปรับความยินยอมและหน้ายืนยันผล</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
+                  <li>แตะการ์ดช่วยเหลือแต่ละรายการ</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>รายการนโยบายต้องตรงกับภาพนโยบาย
-                  <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms screenshot" />
+                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
                 </li>
-                <li>หน้ารายละเอียดความยินยอมต้องตรงกับภาพรายละเอียด
-                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy screenshot" />
+                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
                 </li>
-                <li>หน้าปรับความยินยอมต้องตรงกับภาพปรับความยินยอม
-                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20to%20asso.png" alt="Change consent screenshot" />
+                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
+                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
                 </li>
-                <li>หน้าความยินยอมของคู่ค้าธุรกิจต้องตรงกับภาพคู่ค้าธุรกิจ
-                  <img class="inline-shot" src="my%20acc%20img%20test/permission%20for%20associate%20data%20share.png" alt="Business partner consent screenshot" />
+                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
+                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
+                </li>
+                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
+                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-015<br />Verify help cards for Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
+                  <li>แตะการ์ดช่วยเหลือแต่ละรายการ</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
+                </li>
+                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
+                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
+                </li>
+                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
+                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
+                </li>
+                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
+                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
+                </li>
+                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
+                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="label">Terms &amp; Consent</div>
+              <div class="section-shot-wrap">
+                <img
+                  class="section-shot"
+                  src="my%20acc%20img%20test/term%20and%20condition.png"
+                  alt="Terms and conditions"
+                />
+              </div>
+              <ul class="state-list">
+                <li>guest: no consent menu</li>
+                <li>guest+: consent menu shown in settings</li>
+                <li>Amaze: consent menu shown in settings</li>
+              </ul>
+            </td>
+            <td>
+              <div class="testcase-title">TC-UI-016<br />Verify terms and consent menu for guest</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest ไม่มีเมนูการให้ความยินยอมในส่วนนี้</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ guest</li>
+                  <li>ตรวจสอบส่วนการตั้งค่าและเมนูเงื่อนไข</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>ไม่แสดงรายการการให้ความยินยอมสำหรับ guest</li>
+                <li>ไม่แสดงเมนูหรือหน้ารายการความยินยอมในส่วนนี้</li>
+                <li>
+                  หน้าสำหรับ guest ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/guess%20term%20and%20condition.png" alt="Guest terms and conditions screenshot" />
                 </li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-014<br />ตรวจสอบการสลับเนื้อหาและการมองเห็นตามระดับบัญชี</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าหน้าเปลี่ยนเนื้อหาได้ถูกต้องระหว่างผู้เยี่ยมชม ผู้เยี่ยมชม+ และ Amaze</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ทดสอบสามารถสลับระดับบัญชีหรือจำลองเซสชันที่เก็บไว้ได้</div>
+              <div class="testcase-title">TC-UI-017<br />Verify terms and consent menu for guest+</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าในสถานะผู้เยี่ยมชม</li>
-                  <li>เปิดหน้าในสถานะผู้เยี่ยมชม+</li>
-                  <li>เปิดหน้าในสถานะ Amaze</li>
-                  <li>เปรียบเทียบส่วนหัว แบนเนอร์ แถวเมนู และส่วนล่างของหน้า</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>แตะเมนูเงื่อนไขและความยินยอม</li>
+                  <li>เปิดรายการนโยบายและรายการความยินยอม</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>ผู้เยี่ยมชมแสดงเฉพาะปุ่มเข้าสู่ระบบ ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
-                <li>ผู้เยี่ยมชม+ แสดงแบนเนอร์อัปเกรด ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
-                <li>Amaze แสดงปุ่มโปรไฟล์ แบนเนอร์ Amaze ประวัติการสั่งซื้อ เมนูเพิ่มเติม พันธมิตร ส่วนช่วยเหลือ และส่วนกฎหมาย</li>
-                <li>ทุกสถานะต้องไม่แสดงวิดเจ็ตของสถานะอื่นปนกัน</li>
-                <li>เลย์เอาต์ต้องไม่เสียหายเมื่อสลับระดับบัญชี</li>
+                <li>แสดงเมนูเงื่อนไขและข้อตกลงในส่วนการตั้งค่า</li>
+                <li>เปิดหน้า `term and condition.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms and conditions screenshot" />
+                </li>
+                <li>เปิดหน้า `privacy term.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy policy screenshot" />
+                </li>
+                <li>เปิดหน้า `personalize marketing term.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20term.png" alt="Marketing consent screenshot" />
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="testcase-title">TC-UI-018<br />Verify terms and consent menu for Amaze</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="meta">
+                <strong>ขั้นตอน:</strong>
+                <ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>แตะเมนูเงื่อนไขและความยินยอม</li>
+                  <li>เปิดรายการนโยบายและรายการความยินยอม</li>
+                </ol>
+              </div>
+            </td>
+            <td>
+              <ul>
+                <li>แสดงเมนูเงื่อนไขและข้อตกลงในส่วนการตั้งค่า</li>
+                <li>เปิดหน้า `term and condition.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms and conditions screenshot" />
+                </li>
+                <li>เปิดหน้า `privacy term.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy policy screenshot" />
+                </li>
+                <li>เปิดหน้า `personalize marketing term.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20term.png" alt="Marketing consent screenshot" />
+                </li>
+                <li>เปิดหน้า `permission for associate data share.png` ได้ถูกต้อง
+                  <img class="inline-shot" src="my%20acc%20img%20test/permission%20for%20associate%20data%20share.png" alt="Data sharing consent screenshot" />
+                </li>
+                <li>ผลการยืนยันต้องตรงกับสถานะการยินยอมล่าสุดของบัญชี</li>
               </ul>
             </td>
           </tr>
