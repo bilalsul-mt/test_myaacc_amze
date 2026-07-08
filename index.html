@@ -236,6 +236,10 @@
               <ul>
                 <li>แสดงไอคอนผู้ใช้ในตำแหน่งหัวข้อข้อมูลผู้ใช้</li>
                 <li>แสดงข้อความต้อนรับ “สวัสดี”</li>
+                <li>
+                  หน้าสำหรับ guest ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/personal%20info%20for%20guess.png" alt="Personal info for guest screenshot" />
+                </li>
                 <li>แสดงปุ่ม “เข้าสู่ระบบ” และ “สมัครสมาชิก” ให้ผู้ใช้กดได้</li>
                 <li>เมื่อกดปุ่มแล้วต้องพาไปยังขั้นตอนที่เหมาะสมสำหรับการเข้าสู่ระบบหรือสมัครสมาชิก</li>
                 <li>ไม่แสดงชื่อสมาชิกจริงหรือเมนูข้อมูลส่วนตัวของบัญชีที่เข้าสู่ระบบแล้ว</li>
@@ -244,13 +248,13 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-002<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าสถานะผู้เยี่ยมชม+ แสดงข้อความเชิญอัปเกรดและทางเข้าหน้าโปรไฟล์ได้</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชีผู้เยี่ยมชม+</div>
+              <div class="testcase-title">TC-UI-002<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบ member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าสถานะ member + แสดงข้อความเชิญอัปเกรดและทางเข้าหน้าโปรไฟล์ได้</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชี member +</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบ member +</li>
                   <li>ตรวจสอบเนื้อหาในส่วนข้อมูลผู้ใช้และพื้นที่แบนเนอร์</li>
                   <li>เลือกจุดเข้าสู่หน้าโปรไฟล์</li>
                 </ol>
@@ -259,23 +263,28 @@
             <td>
               <ul>
                 <li>แสดงไอคอนผู้ใช้เหมือนสถานะอื่น</li>
-                <li>แสดงข้อความเชิญชวนสมัครสมาชิก Amaze แบบผู้เยี่ยมชม+</li>
-                <li>แสดงปุ่ม “ข้อมูลส่วนตัว” ให้เข้าไปดูรายละเอียดโปรไฟล์</li>
-                <li>แสดงแบนเนอร์ชวนสมัคร Amaze ตามดีไซน์ของหน้า</li>
-                <li>เมื่อกดปุ่มข้อมูลส่วนตัวแล้วต้องเปิดหน้าหรือแผงเลื่อนโปรไฟล์ที่ถูกต้อง</li>
-                <li>ไม่แสดงชื่อสมาชิกแบบเต็มเหมือนบัญชี Amaze ที่ผูกโปรไฟล์แล้ว</li>
+                <li>
+                  แสดงปุ่ม “ข้อมูลส่วนตัว” ให้เข้าไปดูรายละเอียดโปรไฟล์
+                  <img class="inline-shot" src="my%20acc%20img%20test/guest%20%2B%20profile.png" alt="Guest plus profile screenshot" />
+                </li>
+                <li>
+                  แสดงแบนเนอร์สมัครสมาชิก Amaze member ตามดีไซน์ของหน้า
+                  <img class="inline-shot" src="my%20acc%20img%20test/gust%20plus%20amze%20invite.png" alt="Guest plus amaze invite screenshot" />
+                </li>
+                <li>เมื่อกดปุ่ม “ข้อมูลส่วนตัว” หรือ “สมัครสมาชิก Amaze member” แล้วต้องนำผู้ใช้ไปยังหน้าหรือขั้นตอนที่ถูกต้องและทำงานได้ตามที่กำหนด</li>
+                <li>ไม่แสดงชื่อสมาชิกแบบเต็มเหมือนบัญชี Amaze member ที่ผูกโปรไฟล์แล้ว</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-003<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบ Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าบัญชี Amaze ที่ลงทะเบียนครบถ้วนแสดงเนื้อหาส่วนตัวได้ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชี Amaze ที่มีโปรไฟล์บันทึกไว้</div>
+              <div class="testcase-title">TC-UI-003<br />ตรวจสอบส่วนข้อมูลผู้ใช้เมื่อเข้าสู่ระบบแบบ Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าบัญชี Amaze member ที่ลงทะเบียนครบถ้วนแสดงเนื้อหาส่วนตัวได้ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบด้วยบัญชี Amaze member ที่มีโปรไฟล์บันทึกไว้</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบ Amaze</li>
+                  <li>เปิดหน้าบัญชีของฉันขณะเข้าสู่ระบบแบบ Amaze member</li>
                   <li>ตรวจสอบชื่อที่แสดงและรายการเมนูบัญชี</li>
                   <li>เปิดรายการที่เกี่ยวกับโปรไฟล์ ประวัติ คูปอง และความช่วยเหลือ</li>
                 </ol>
@@ -284,9 +293,14 @@
             <td>
               <ul>
                 <li>แสดงไอคอนผู้ใช้ที่ส่วนหัวของบัญชี</li>
-                <li>แสดงชื่อสมาชิกจริงจากโปรไฟล์ที่ล็อกอินอยู่</li>
-                <li>แสดงปุ่ม “ข้อมูลส่วนตัว” เพื่อไปยังหน้ารายละเอียดบัญชี</li>
-                <li>แสดงเมนูประวัติการสั่งซื้อ เมนูเพิ่มเติม และส่วนช่วยเหลือครบถ้วน</li>
+                <li>
+                  แสดงชื่อสมาชิกจริงจากโปรไฟล์ที่ล็อกอินอยู่ และแสดงปุ่ม “ข้อมูลส่วนตัว” เพื่อไปยังหน้ารายละเอียดบัญชี
+                  <img class="inline-shot" src="my%20acc%20img%20test/Profile%20info%20amaze%20.png" alt="Profile info amaze screenshot" />
+                </li>
+                <li>
+                  แสดงแบนเนอร์ Amaze member ในส่วนหัวของโปรไฟล์
+                  <img class="inline-shot" src="my%20acc%20img%20test/Amaze%20title%20in%20profile.png" alt="Amaze title in profile screenshot" />
+                </li>
                 <li>ข้อมูลที่แสดงต้องสอดคล้องกับโปรไฟล์ของผู้ใช้ที่เข้าสู่ระบบในเซสชันปัจจุบัน</li>
                 <li>เมนูที่กดได้ต้องนำไปยังปลายทางที่ถูกต้องและไม่แสดงข้อมูลจากบัญชีอื่น</li>
               </ul>
@@ -311,8 +325,8 @@
               </div>
               <ul class="state-list">
                 <li>guest: not shown</li>
-                <li>guest+: order history card shown</li>
-                <li>Amaze: order history card shown</li>
+                <li>member +: order history card shown</li>
+                <li>Amaze member: order history card shown</li>
               </ul>
             </td>
             <td>
@@ -336,13 +350,13 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-005<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ guest+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="testcase-title">TC-UI-005<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า member + เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ member +</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ member +</li>
                   <li>ตรวจสอบการ์ดประวัติการสั่งซื้อและปุ่มมุมขวาบน</li>
                 </ol>
               </div>
@@ -357,13 +371,13 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-006<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="testcase-title">TC-UI-006<br />ตรวจสอบการ์ดประวัติการสั่งซื้อสำหรับ Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze member เห็นการ์ดประวัติการสั่งซื้อและปุ่มสถานะคำสั่งซื้อ</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze member</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze member</li>
                   <li>ตรวจสอบการ์ดประวัติการสั่งซื้อและปุ่มมุมขวาบน</li>
                 </ol>
               </div>
@@ -388,8 +402,8 @@
               </div>
               <ul class="state-list">
                 <li>guest: hidden</li>
-                <li>guest+: E-Voucher only</li>
-                <li>Amaze: E-Voucher + coupon</li>
+                <li>member +: E-Voucher only</li>
+                <li>Amaze member: E-Voucher + coupon</li>
               </ul>
             </td>
             <td>
@@ -413,55 +427,53 @@
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-008<br />Verify E-Voucher visibility for guest+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นเฉพาะการ์ด E-Voucher</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="testcase-title">TC-UI-008<br />Verify E-Voucher visibility for member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า member + เห็นเฉพาะการ์ด E-Voucher</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ member +</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
-                  <li>แตะ `E-Voucher ของฉัน`</li>
-                </ol>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ member +</li>
+                  <li>แตะ <strong>E-Voucher ของฉัน</strong></li>
+                  <li>
+                  หน้าสำหรับ member + ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/E-voucher%20guess%20plus.png" alt="E-Voucher guest plus screenshot" />
+                </li>       
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ด `E-Voucher ของฉัน`</li>
-                <li>เมื่อกดแล้วต้องเปิดหน้า E-Voucher ที่ถูกต้อง</li>
+                <li>แสดงการ์ด <strong>E-Voucher ของฉัน</strong></li>
                 <li>
-                  หน้าหลังแตะ E-Voucher ต้องตรงกับภาพ
-                  <img class="inline-shot" src="my%20acc%20img%20test/vocher%20page.png" alt="E-Voucher page" />
+                  หน้าสำหรับ member + ต้องตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/E-voucher%20guess%20plus.png" alt="E-Voucher guest plus screenshot" />
                 </li>
+                <li>เมื่อกดแล้วต้องเปิดหน้า E-Voucher ที่ถูกต้อง</li>
                 <li>หน้าคูปองต้องไม่แสดงในสถานะนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-009<br />Verify E-Voucher and coupon visibility for Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นทั้ง E-Voucher และคูปอง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="testcase-title">TC-UI-009<br />Verify E-Voucher and coupon visibility for Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze member เห็นทั้ง E-Voucher และคูปอง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze member</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
-                  <li>แตะ `E-Voucher ของฉัน`</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze member</li>
+                  <li>แตะ <strong>E-Voucher ของฉัน</strong></li>
                   <li>แตะ `คูปองของฉัน`</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ด `E-Voucher ของฉัน` และ `คูปองของฉัน`</li>
+                <li>
+                  แสดงการ์ด <strong>E-Voucher ของฉัน</strong> และ <strong>คูปองของฉัน</strong>
+                  <img class="inline-shot" src="my%20acc%20img%20test/vocher%20and%20coupon.png" alt="Voucher and coupon screenshot" />
+                </li>
                 <li>เมื่อกดแล้วต้องเปิดหน้าที่ถูกต้องทั้งสองส่วน</li>
-                <li>
-                  หน้าหลังแตะ E-Voucher ต้องตรงกับภาพ
-                  <img class="inline-shot" src="my%20acc%20img%20test/vocher%20page.png" alt="E-Voucher page" />
-                </li>
-                <li>
-                  หน้าหลังแตะคูปองต้องตรงกับภาพ
-                  <img class="inline-shot" src="my%20acc%20img%20test/coupon%20page.png" alt="Coupon page" />
-                </li>
                 <li>หน้าคูปองต้องมีแท็บของตัวเอง เช่น ทั้งหมด พิเศษสำหรับคุณ รีวอร์ด และคูปองสมาชิกใหม่</li>
               </ul>
             </td>
@@ -479,67 +491,71 @@
             </td>
             <td>
               <div class="testcase-title">TC-UI-010<br />Verify affiliate banner display for guest</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชมไม่เห็นแบนเนอร์พันธมิตร</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest ไม่เห็น Affiliate Banner</div>
               <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้ยังไม่ได้เข้าสู่ระบบ</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม</li>
-                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ guest</li>
+                  <li>เลื่อนไปยังส่วน Affiliate Banner</li>
                   <li>ตรวจสอบบริเวณแบนเนอร์</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>ไม่ควรแสดงแบนเนอร์พันธมิตรสำหรับผู้เยี่ยมชม</li>
+                <li>ไม่ควรแสดง Affiliate Banner สำหรับ guest</li>
                 <li>ไม่ควรแสดงพื้นที่ว่างของแบนเนอร์ในส่วนนี้</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-011<br />Verify affiliate banner display for guest+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่าผู้เยี่ยมชม+ เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+ และมีข้อมูลพันธมิตร</div>
+              <div class="testcase-title">TC-UI-011<br />Verify affiliate banner display for member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า member + เห็น Affiliate Banner เมื่อมีข้อมูล</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ member + และมีข้อมูล Affiliate Banner</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
-                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
-                  <li>แตะแบนเนอร์พันธมิตร</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ member +</li>
+                  <li>เลื่อนไปยังส่วน Affiliate Banner</li>
+                  <li>แตะแบนเนอร์ Affiliate Banner</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงหัวข้อพันธมิตร Amaze</li>
-                <li>แสดงแบนเนอร์ตามภาพที่กำหนด</li>
-                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดดีพลิงก์ที่ผูกไว้</li>
-                <li>ผู้เยี่ยมชม+ ควรเห็นแบนเนอร์เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
+                <li>
+                  แสดงหัวข้อ Affiliate Banner Amaze member ตามภาพที่กำหนด
+                  <img class="inline-shot" src="my%20acc%20img%20test/affiliate.png" alt="Affiliate banner screenshot" />
+                </li>
+                <li>เมื่อแตะแบนเนอร์แล้วต้องเปิด Deep linkที่ผูกไว้</li>
+                <li>member + ควรเห็น Affiliate Banner เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-012<br />Verify affiliate banner display for Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นแบนเนอร์พันธมิตรเมื่อมีข้อมูล</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze และมีข้อมูลพันธมิตร</div>
+              <div class="testcase-title">TC-UI-012<br />Verify affiliate banner display for Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze member เห็น Affiliate Banner เมื่อมีข้อมูล</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze member และมีข้อมูล Affiliate Banner</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
-                  <li>เลื่อนไปยังส่วนพันธมิตร</li>
-                  <li>แตะแบนเนอร์พันธมิตร</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze member</li>
+                  <li>เลื่อนไปยังส่วน Affiliate Banner</li>
+                  <li>แตะแบนเนอร์ Affiliate Banner</li>
                 </ol>
               </div>
             </td>
             <td>
               <ul>
-                <li>แสดงหัวข้อพันธมิตร Amaze</li>
-                <li>แสดงแบนเนอร์ตามภาพที่กำหนด</li>
+                <li>
+                  แสดงหัวข้อ Affiliate Banner Amaze member ตามภาพที่กำหนด
+                  <img class="inline-shot" src="my%20acc%20img%20test/affiliate.png" alt="Affiliate banner screenshot" />
+                </li>
                 <li>เมื่อแตะแบนเนอร์แล้วต้องเปิดดีพลิงก์ที่ผูกไว้</li>
-                <li>Amaze ควรเห็นแบนเนอร์เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
+                <li>Amaze member ควรเห็น Affiliate Banner เฉพาะเมื่อมีข้อมูลจากเทมเพลต</li>
               </ul>
             </td>
           </tr>
@@ -547,7 +563,7 @@
             <td rowspan="3">
               <div class="label">Help Section</div>
               <ul class="state-list">
-                <li>all states: same help cards</li>
+                <li>all states: cards come from API response</li>
                 <li>state-specific checks focus on access and link targets</li>
               </ul>
               <div class="section-shot-wrap">
@@ -573,32 +589,26 @@
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
+                <li>แสดง Help Section ตามรายการที่ API ส่งกลับมา</li>
+                <li>ทุกการ์ดที่ API ส่งมาจะต้องแสดงไอคอนและชื่อให้ถูกต้องตามข้อมูล</li>
+                <li>
+                  หน้า Help Section ควรเชิญชวนผู้ใช้ guest ให้อัปเกรดเป็น Amaze member
+                  <img class="inline-shot" src="my%20acc%20img%20test/Gamification%20of%20guess%20and%20guess%20%2B.png" alt="Gamification guest screenshot" />
                 </li>
-                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
-                </li>
-                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
-                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
-                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
-                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>แตะการ์ดใด ๆ แล้วต้องเปิด deep link หรือหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>ถ้า API ไม่ส่งการ์ดบางรายการ ต้องไม่บังคับให้แสดงการ์ดนั้น</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-014<br />Verify help cards for guest+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="testcase-title">TC-UI-014<br />Verify help cards for member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า member + เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ member +</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ member +</li>
                   <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
                   <li>แตะการ์ดช่วยเหลือแต่ละรายการ</li>
                 </ol>
@@ -606,32 +616,26 @@
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
+                <li>แสดง Help Section ตามรายการที่ API ส่งกลับมา</li>
+                <li>ทุกการ์ดที่ API ส่งมาจะต้องแสดงไอคอนและชื่อให้ถูกต้องตามข้อมูล</li>
+                <li>
+                  หน้า Help Section ควรเชิญชวนผู้ใช้ member + ให้อัปเกรดเป็น Amaze member
+                  <img class="inline-shot" src="my%20acc%20img%20test/Gamification%20of%20guess%20and%20guess%20%2B.png" alt="Gamification guest plus screenshot" />
                 </li>
-                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
-                </li>
-                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
-                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
-                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
-                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>แตะการ์ดใด ๆ แล้วต้องเปิด deep link หรือหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>ถ้า API ไม่ส่งการ์ดบางรายการ ต้องไม่บังคับให้แสดงการ์ดนั้น</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-015<br />Verify help cards for Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="testcase-title">TC-UI-015<br />Verify help cards for Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze member เห็นการ์ดช่วยเหลือและรายการกฎหมายตามรูปแบบของหน้า</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze member</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze member</li>
                   <li>เลื่อนไปยังส่วนช่วยเหลือ</li>
                   <li>แตะการ์ดช่วยเหลือแต่ละรายการ</li>
                 </ol>
@@ -639,20 +643,10 @@
             </td>
             <td>
               <ul>
-                <li>แสดงการ์ดช่วยเหลือตามภาพ `Help.png`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Help.png" alt="Help screenshot" />
-                </li>
-                <li>`คำถามที่พบบ่อย` ต้องเปิด `FAQs Landing`
-                  <img class="inline-shot" src="my%20acc%20img%20test/Faqs.png" alt="FAQs screenshot" />
-                </li>
-                <li>`ติดต่อเรา` ต้องเปิดหน้าติดต่อ
-                  <img class="inline-shot" src="my%20acc%20img%20test/contact%20us.png" alt="Contact us screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ต้องเปิดหน้ารอโหลด / ติดต่อร้านค้า ก่อนเข้าหน้าปลายทาง
-                  <img class="inline-shot" src="my%20acc%20img%20test/Contact%20sellers.png" alt="Contact sellers screenshot" />
-                </li>
-                <li>`แชทกับร้านค้า` ยังอยู่ระหว่างพัฒนา ดังนั้นอาจแสดงสถานะกำลังโหลด</li>
-                <li>การ์ดช่วยเหลืออื่น ๆ ต้องพาไปหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>แสดง Help Section ตามรายการที่ API ส่งกลับมา</li>
+                <li>ทุกการ์ดที่ API ส่งมาจะต้องแสดงไอคอนและชื่อให้ถูกต้องตามข้อมูล</li>
+                <li>แตะการ์ดใด ๆ แล้วต้องเปิด deep link หรือหน้าที่ผูกไว้ถูกต้อง</li>
+                <li>ถ้า API ไม่ส่งการ์ดบางรายการ ต้องไม่บังคับให้แสดงการ์ดนั้น</li>
               </ul>
             </td>
           </tr>
@@ -668,8 +662,8 @@
               </div>
               <ul class="state-list">
                 <li>guest: no consent menu</li>
-                <li>guest+: consent menu shown in settings</li>
-                <li>Amaze: consent menu shown in settings</li>
+                <li>member +: consent menu shown in settings</li>
+                <li>Amaze member: consent menu shown in settings</li>
               </ul>
             </td>
             <td>
@@ -686,24 +680,24 @@
             </td>
             <td>
               <ul>
-                <li>ไม่แสดงรายการการให้ความยินยอมสำหรับ guest</li>
-                <li>ไม่แสดงเมนูหรือหน้ารายการความยินยอมในส่วนนี้</li>
                 <li>
-                  หน้าสำหรับ guest ต้องตรงกับภาพ
+                  หน้าสำหรับ guest ต้องมีปุ่ม “นโยบายความเป็นส่วนตัว” และ “ข้อกำหนดและเงื่อนไข” ตรงกับภาพ
                   <img class="inline-shot" src="my%20acc%20img%20test/guess%20term%20and%20condition.png" alt="Guest terms and conditions screenshot" />
                 </li>
+                <li>ไม่แสดงเมนูหรือหน้ารายการการให้ความยินยอมสำหรับ guest</li>
+                <li>ทุกหน้าในส่วนนี้ต้องเปิดและแสดงผลได้ถูกต้องตามสถานะ guest</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-017<br />Verify terms and consent menu for guest+</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า guest+ เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบผู้เยี่ยมชม+</div>
+              <div class="testcase-title">TC-UI-017<br />Verify terms and consent menu for member +</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า member + เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ member +</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะผู้เยี่ยมชม+</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ member +</li>
                   <li>แตะเมนูเงื่อนไขและความยินยอม</li>
                   <li>เปิดรายการนโยบายและรายการความยินยอม</li>
                 </ol>
@@ -711,28 +705,24 @@
             </td>
             <td>
               <ul>
-                <li>แสดงเมนูเงื่อนไขและข้อตกลงในส่วนการตั้งค่า</li>
-                <li>เปิดหน้า `term and condition.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms and conditions screenshot" />
+                <li>
+                  หน้าสำหรับ member + ต้องมีปุ่ม “นโยบายความเป็นส่วนตัว” และ “ข้อกำหนดและเงื่อนไข” ตรงกับภาพ
+                  <img class="inline-shot" src="my%20acc%20img%20test/guess%20term%20and%20condition.png" alt="Guest terms and conditions screenshot" />
                 </li>
-                <li>เปิดหน้า `privacy term.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy policy screenshot" />
-                </li>
-                <li>เปิดหน้า `personalize marketing term.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20term.png" alt="Marketing consent screenshot" />
-                </li>
+                <li>ไม่มีเมนู `การให้ความยินยอม` สำหรับ member +</li>
+                <li>ทุกปุ่มและทุกหน้าที่เกี่ยวข้องต้องทำงานได้ถูกต้องตามสถานะ member +</li>
               </ul>
             </td>
           </tr>
           <tr>
             <td>
-              <div class="testcase-title">TC-UI-018<br />Verify terms and consent menu for Amaze</div>
-              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
-              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze</div>
+              <div class="testcase-title">TC-UI-018<br />Verify terms and consent menu for Amaze member</div>
+              <div class="meta section"><strong>วัตถุประสงค์:</strong> ยืนยันว่า Amaze member เห็นเมนูเงื่อนไขและรายการความยินยอมที่ถูกต้อง</div>
+              <div class="meta"><strong>เงื่อนไขก่อนทดสอบ:</strong> ผู้ใช้เข้าสู่ระบบแบบ Amaze member</div>
               <div class="meta">
                 <strong>ขั้นตอน:</strong>
                 <ol>
-                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze</li>
+                  <li>เปิดหน้าบัญชีของฉันในสถานะ Amaze member</li>
                   <li>แตะเมนูเงื่อนไขและความยินยอม</li>
                   <li>เปิดรายการนโยบายและรายการความยินยอม</li>
                 </ol>
@@ -740,20 +730,11 @@
             </td>
             <td>
               <ul>
-                <li>แสดงเมนูเงื่อนไขและข้อตกลงในส่วนการตั้งค่า</li>
-                <li>เปิดหน้า `term and condition.png` ได้ถูกต้อง
+                <li>
+                  หน้าสำหรับ Amaze member ต้องมีปุ่ม “นโยบายความเป็นส่วนตัว” และ “ข้อกำหนดและเงื่อนไข” ตรงกับภาพ
                   <img class="inline-shot" src="my%20acc%20img%20test/term%20and%20condition.png" alt="Terms and conditions screenshot" />
                 </li>
-                <li>เปิดหน้า `privacy term.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/privacy%20term.png" alt="Privacy policy screenshot" />
-                </li>
-                <li>เปิดหน้า `personalize marketing term.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/personalize%20marketing%20term.png" alt="Marketing consent screenshot" />
-                </li>
-                <li>เปิดหน้า `permission for associate data share.png` ได้ถูกต้อง
-                  <img class="inline-shot" src="my%20acc%20img%20test/permission%20for%20associate%20data%20share.png" alt="Data sharing consent screenshot" />
-                </li>
-                <li>ผลการยืนยันต้องตรงกับสถานะการยินยอมล่าสุดของบัญชี</li>
+                <li>ทุกปุ่มและทุกหน้าที่เกี่ยวข้องต้องทำงานได้ถูกต้องตามสถานะ Amaze member</li>
               </ul>
             </td>
           </tr>
